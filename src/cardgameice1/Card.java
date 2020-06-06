@@ -13,11 +13,10 @@ package cardgameice1;
  * - encapsulate fields (encapsulation principle) 
  getters/setters
  */
-public class Card 
-{
-  private String suits;//diamonds,clubs,spades, hearts
-  private int value; // 1 to 13
-public static final String[] SUITS={"diamonds","clubs","spades","hearts"};
+public class Card {
+    private String suits;//diamonds,clubs,spades, hearts
+    private int value; // 1 to 13
+    public static final String[] SUITS={"diamonds","clubs","spades","hearts"};
     
     public String getSuits() {
         return suits;
@@ -37,9 +36,13 @@ public static final String[] SUITS={"diamonds","clubs","spades","hearts"};
     public void setValue(int value) {
         this.value = value;
     }
-//public int randomValue()
-//{
-    //int value= // 
-           // return value;
-//}
+    
+    public int randomValue(){
+         value = (int)(Math.random()*13+1);
+        return value;
+    }
+    public  String randomSuit() {
+        suits = (Card.SUITS[(int)(Math.random()*3)]);
+       return suits;
+    }
 }
