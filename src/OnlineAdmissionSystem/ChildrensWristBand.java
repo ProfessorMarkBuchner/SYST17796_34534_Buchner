@@ -9,6 +9,6 @@ package OnlineAdmissionSystem;
  *
  * @author aleks
  */
-public class ChildrensWristBand {
+public class ChildrensWristBand extends WristBand{
     
 }
