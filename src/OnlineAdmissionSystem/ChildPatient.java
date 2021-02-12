@@ -9,11 +9,6 @@ package OnlineAdmissionSystem;
  *
  * @author aleks
  */
-public class ChildPatient extends Patient{
+public class ChildPatient {
     
-    
-    
-    
-    
-    
-}//End Class:__________________________
+}
