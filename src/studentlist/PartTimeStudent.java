@@ -5,7 +5,7 @@ package studentlist;
  * @author markb Jan 27 2021
  * Aleksandar Lim was here @ Sheridan College 2021
  */
-public class PartTimeStudent extends Student{
+public class PartTimeStudent extends Patient{
     private int numCourses;
     // This is 
 
