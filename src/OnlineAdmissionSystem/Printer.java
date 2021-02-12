@@ -7,8 +7,30 @@ package OnlineAdmissionSystem;
 
 /**
  *
- * @author aleks
+ * @author Aleks Lim was here @ Sheridan College 2021
  */
+
+//For any print related tasks like looping through array lists
 public class Printer {
     
-}
+    //Fields:_________________
+    
+    //Constructors:__________________
+    public Printer(){
+    
+    }//End C:*
+    
+    //Getters:________________________
+    
+    //Setters:__________________________
+    
+    //Methods:__________________________
+    
+    public void printBasicBand(Patient patient){
+        System.out.println(patient.getName());
+        System.out.println(patient.getDob());
+        System.out.println(patient.getAdmitDate());
+        System.out.println(patient.get_Family_Doctor());
+    }//End M:*
+    
+}//End Class:_____________________
