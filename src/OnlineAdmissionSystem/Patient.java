@@ -5,6 +5,9 @@
  */
 package OnlineAdmissionSystem;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 /**
  *This class represents students in our application
  * @author markb Jan 27
@@ -12,6 +15,18 @@ package OnlineAdmissionSystem;
 public class Patient {
     
     private String name;
+    private LocalDate dob;
+    private String family_doctor; 
+    private ArrayList<String> medications;
+    private ArrayList<String> allergies; 
+    private ArrayList<WristBand> bandList;
+    private WristBand basicBand;
+    private LocalDate admitDate; 
+    
+    public boolean checkAge(){
+    boolean result = false;
+    return result; 
+    } 
 
     public Patient(String name) {
         this.name = name;
