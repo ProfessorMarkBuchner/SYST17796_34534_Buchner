@@ -9,6 +9,6 @@ package OnlineAdmissionSystem;
  *
  * @author aleks
  */
-public class WaitTimesGroup {
+public class WaitTimesGroup extends ResearchGroups{
     
 }
