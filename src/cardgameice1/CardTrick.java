@@ -29,38 +29,39 @@ public class CardTrick{
            c.setValue(c.randomValue());
            c.setSuits(c.randomSuit());
            magicHand[i]=c;//saving object in array
-           //System.out.println(magicHand[i].getValue()+" "+magicHand[i].getSuits());
+           System.out.println(magicHand[i].getValue()+" "+magicHand[i].getSuits());
         }
         
         //take input from user and compare with array\
-        int usernumber;//user input variable
+        Card lockycard= new Card();
 
         //validate number user input
         do{
             System.out.println("Please enter a card number between 1 and 13");
-            usernumber = read.nextInt();
-            if(usernumber < 1 || usernumber > 13){
+            lockycard.setValue(read.nextInt());
+            
+            //usernumber = read.nextInt();
+            if(lockycard.getValue() < 1 || lockycard.getValue() > 13){
                 System.out.println("Number no valid!\t\t Try again");
             }
-        }while(usernumber < 1 || usernumber > 13);
+        }while(lockycard.getValue() < 1 || lockycard.getValue() > 13);
         read.nextLine();//clean buffer
         
-        //validate suit user input        
-        String suitUser="";
-        int x=0;
+        //validate suit user input
+        boolean x=false;
         do{
             System.out.println("Please enter you suit1  (Diamonds, Clubs, Spades or Heards)");
-            suitUser = read.nextLine();
-            if(suitUser.equals("Diamonds")||suitUser.equals("Clubs")||suitUser.equals("Spades")||suitUser.equals("Heards")){
-                x=1;
+            lockycard.setSuits(read.nextLine());
+            if(lockycard.getSuits().equals("Diamonds")||lockycard.getSuits().equals("Clubs")||lockycard.getSuits().equals("Spades")||lockycard.getSuits().equals("Heards")){
+                x=true;
             }else{
                 System.out.println("Suit no valid! Try again");
             }
-        }while(x != 1);
+        }while(!x);
         
         //compare with array
         for(int i=0;i<7;i++){
-            if(usernumber==magicHand[i].getValue()&& suitUser.equals(magicHand[i].getSuits())){
+            if(lockycard.getValue()==magicHand[i].getValue()&& lockycard.getSuits().equals(magicHand[i].getSuits())){
                 System.out.println("YEA!!! Your card is in the MagicHand!!!");
                 break;
             }else{
