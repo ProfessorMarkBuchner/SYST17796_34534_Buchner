@@ -5,13 +5,16 @@
  */
 package OnlineAdmissionSystem;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 /**
  *
  * @author Aleks Lim was here @ Sheridan College 2021
  */
 
 //Class to model children as different type of patient 
-public class ChildPatient {
+public class ChildPatient extends Patient{
     
     //Fields:____________________________
     
@@ -19,7 +22,27 @@ public class ChildPatient {
     
     //Constructors:_______________________________
     
-    public ChildPatient(String parent){
+    public ChildPatient(
+             String parent,
+             String name,
+             LocalDate dob,
+             String family_doctor,
+             ArrayList<String> medications,
+             ArrayList<String> allergies,
+             ArrayList<WristBand> bandList,
+             WristBand basicBand,
+             LocalDate admitDate
+    ){
+        super(
+                name, 
+                dob, 
+                family_doctor, 
+                medications, 
+                allergies, 
+                bandList, 
+                basicBand, 
+                admitDate
+        );
         this.parent = parent; 
     }//End C:*
     
