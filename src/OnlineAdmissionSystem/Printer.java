@@ -33,4 +33,20 @@ public class Printer {
         System.out.println(patient.get_Family_Doctor());
     }//End M:*
     
+    public void printAllergyBand(Patient patient){
+        System.out.println(patient.getName());
+        System.out.println(patient.getDob());
+        System.out.println(patient.getAdmitDate());
+        System.out.println(patient.get_Family_Doctor());
+        System.out.println(patient.getAllergies());
+    }//End M:*
+    
+    public void printChildrensBand(ChildPatient patient){
+        System.out.println(patient.getName());
+        System.out.println(patient.getDob());
+        System.out.println(patient.getAdmitDate());
+        System.out.println(patient.get_Family_Doctor());
+        System.out.println(patient.getParent());
+    }//End M:*
+    
 }//End Class:_____________________
