@@ -9,6 +9,6 @@ package OnlineAdmissionSystem;
  *
  * @author aleks
  */
-public class AllergyWristBand {
+public class AllergyWristBand extends WristBand{
     
 }
