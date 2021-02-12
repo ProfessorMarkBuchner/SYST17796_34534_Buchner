@@ -21,4 +21,4 @@ public class PartTimeStudent extends Student{
         this.numCourses = numCourses;
     }
     
-}
+}//End Class
