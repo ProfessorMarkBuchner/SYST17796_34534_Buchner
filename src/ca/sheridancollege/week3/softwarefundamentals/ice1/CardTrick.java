@@ -26,19 +26,16 @@ public class CardTrick {
             magicHand[i] = c;
         }
         Scanner sc = new Scanner(System.in);
-        Card userCard = new Card();
-        System.out.println("please pick a card value then hit enter");
-        userCard.setValue(sc.nextInt());
-        sc.nextLine();
-        System.out.println("please pick a card suit then hit enter");
-        userCard.setSuit(sc.nextLine());
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("Hearts");
 
         for(int i = 0; i < magicHand.length; i++){
 
-            if (magicHand[i].getValue() == userCard.getValue()){
-                if (magicHand[i].getSuit().equals(userCard.getSuit())) {
+            if (magicHand[i].getValue() == luckyCard.getValue()){
+                if (magicHand[i].getSuit().equals(luckyCard.getSuit())) {
                     
-                    System.out.println("the card you selected was number "+ i + 1 +" in the hand");
+                    System.out.println("the card was number "+ i + 1 +" in the hand");
                     break;
                 }
             }
