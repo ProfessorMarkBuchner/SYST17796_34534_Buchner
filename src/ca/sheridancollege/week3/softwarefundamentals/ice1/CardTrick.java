@@ -1,9 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Paul Zomparelli
+991321510
  */
 package ca.sheridancollege.week3.softwarefundamentals.ice1;
+
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -20,11 +21,33 @@ public class CardTrick {
         for (int i=0; i<magicHand.length; i++)
         {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            c.setValue((int) (Math.random() * (13) + 1));
+            c.setSuit(Card.SUITS[(int) (Math.random() * (4))]);
+            magicHand[i] = c;
+        }
+        Scanner sc = new Scanner(System.in);
+        Card userCard = new Card();
+        System.out.println("please pick a card value then hit enter");
+        userCard.setValue(sc.nextInt());
+        sc.nextLine();
+        System.out.println("please pick a card suit then hit enter");
+        userCard.setSuit(sc.nextLine());
+
+        for(int i = 0; i < magicHand.length; i++){
+
+            if (magicHand[i].getValue() == userCard.getValue()){
+                if (magicHand[i].getSuit().equals(userCard.getSuit())) {
+                    
+                    System.out.println("the card you selected was number "+ i + 1 +" in the hand");
+                    break;
+                }
+            }
+            if(i + 1 == magicHand.length){
+                System.out.println("the card was not in the hand");
+            }
         }
         
-        //insert code to ask the user for Card value and suit, create their card
+//insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
     }
