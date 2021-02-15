@@ -11,4 +11,27 @@ package OnlineAdmissionSystem;
  */
 public class WristBand {
     
-}
+    //Fields:_______________________________________
+    
+    private Long barcode; 
+    
+    //Constructors:__________________________________
+    
+    
+    public WristBand(){
+    
+    }//End C:*
+    
+    //Getters:_________________________________________
+    
+    public Long getBarcode(){
+        return barcode;
+    }
+    
+    //Setters:_______________________________
+    
+    public void setBarcode(Long newB){
+        this.barcode = newB; 
+    }//End S:*
+    
+}//End Class:*
