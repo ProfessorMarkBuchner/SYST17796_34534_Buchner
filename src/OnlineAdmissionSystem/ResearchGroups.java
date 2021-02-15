@@ -25,8 +25,14 @@ public class ResearchGroups {
     }
     
     //All Arg Constructor 
-    public ResearchGroups(ArrayList<Patient> patientList){
+    public ResearchGroups(
+                          ArrayList<Patient> patientList,
+                           ArrayList<ResearchGroups> groupList,
+                           int duplicates
+                          ){
         this.patientList = patientList; 
+        this.groupList = groupList;
+        this.duplicates = duplicates;
     }//End C:*
     
     //Getters:
@@ -54,11 +60,13 @@ public class ResearchGroups {
         for(int i = 0; i < groupList.size(); i++){
             for(int j = 0; j < groupList.get(i).getPatientList().size(); j++){
                 if(groupList.get(i).getPatientList().get(j).getId() == tPatient.getId()){
-                    result = true;
                     duplicates += 1;
                 }//End I:*
             }//End F1:*
         }//End F2:*
+        if(duplicates > 1){
+            result = true;
+        }//End I:*
         return result;
     }//End M:*
     
