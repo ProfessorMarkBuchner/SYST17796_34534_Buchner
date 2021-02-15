@@ -11,4 +11,14 @@ package OnlineAdmissionSystem;
  */
 public class AllergyWristBand extends WristBand{
     
-}
+    //Constrcutors:_________________________________
+    
+    public AllergyWristBand(){
+    
+    }
+    
+    public AllergyWristBand(Long barcode){
+        super(barcode);
+    }
+    
+}//End Class:*
