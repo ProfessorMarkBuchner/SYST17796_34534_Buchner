@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class Patient {
 
     //Fields:___________________________
+    private int id;
     private String name;
     private LocalDate dob;
     private String family_doctor;
@@ -33,6 +34,7 @@ public class Patient {
     }
 
     public Patient(
+            int id,
             String name,
             LocalDate dob,
             String family_doctor,
@@ -42,6 +44,7 @@ public class Patient {
             WristBand basicBand,
             LocalDate admitDate
     ) {
+        this.id = id;
         this.name = name;
         this.dob = dob;
         this.family_doctor = family_doctor;
@@ -54,6 +57,9 @@ public class Patient {
 
     //Getters:______________________________
     
+    public int getId(){
+    return id;
+    }//End G:*
     public String getName() {
         return name;
     }//End G:*
@@ -88,6 +94,9 @@ public class Patient {
 
     //Setters:__________________________
     
+    public void setId(int newId){
+        this.id = newId;
+    }//End S:*
     
     public void setName(String name) {
         this.name = name;
