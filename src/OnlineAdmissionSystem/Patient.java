@@ -102,32 +102,32 @@ public class Patient {
         this.name = name;
     }//End S:*
 
-    public void setDob() {
-        this.dob = dob;
+    public void setDob(LocalDate newDob) {
+        this.dob = newDob;
     }//End S:*
 
-    public void set_Family_Doctor() {
-        this.family_doctor = family_doctor;
+    public void set_Family_Doctor(String newFD) {
+        this.family_doctor = newFD;
     }//End S:*
 
-    public void setMedications() {
-        this.medications = medications;
+    public void setMedications(ArrayList<String> newMs) {
+        this.medications = newMs;
     }//End S:*
 
-    public void setAllergies() {
-        this.allergies = allergies;
+    public void setAllergies(ArrayList<String> newAs) {
+        this.allergies = newAs;
     }//End S:*
 
-    public void setBandList() {
-        this.bandList = bandList;
+    public void setBandList(ArrayList<WristBand> newBLs) {
+        this.bandList = newBLs;
     }//End S:*
 
-    public void setBasicBand() {
-        this.basicBand = basicBand;
+    public void setBasicBand(WristBand newBB) {
+        this.basicBand = newBB;
     }//End S:*
 
-    public void setAdmitDate() {
-        this.admitDate = admitDate;
+    public void setAdmitDate(LocalDate newAD) {
+        this.admitDate = newAD;
     }//End S:*
 
     //Methods
