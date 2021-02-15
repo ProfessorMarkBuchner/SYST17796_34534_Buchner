@@ -5,10 +5,36 @@
  */
 package OnlineAdmissionSystem;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aleks
  */
 public class WaitTimesGroup extends ResearchGroups{
     
-}
+    
+    //Fields:
+    private double waitTime;
+    private ArrayList<Patient> groupList;
+    
+    //Constructors 
+    
+    //No Arg 
+    public WaitTimesGroup(){
+    
+    }
+    
+    
+    public boolean minCapacity(){
+    boolean result = false;
+        if(this.groupList.size() >= 10){
+            result = true; 
+        }//End I:*
+    return result; 
+    }//End M:*
+    
+    
+    
+    
+}//End Class
