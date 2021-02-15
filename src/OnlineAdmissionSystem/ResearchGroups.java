@@ -5,10 +5,32 @@
  */
 package OnlineAdmissionSystem;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author aleks
+ * @author Aleks Lim @ Sheridan College 2021 
  */
 public class ResearchGroups {
     
-}
+    
+    //Fields
+    
+    private ArrayList<Patient> groupList; 
+    
+    //No Arg Constructor 
+    public ResearchGroups(){
+    }
+    
+    
+    //Methods
+    
+    public boolean maxGroups(){
+    boolean result = false;
+        if(this.groupList.size() > 10){
+            result = true; 
+        }//End I:*
+    return result; 
+    }//End M:*
+    
+}//End Class:*
