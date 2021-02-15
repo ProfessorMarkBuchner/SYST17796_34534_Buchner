@@ -23,6 +23,7 @@ public class ChildPatient extends Patient{
     //Constructors:_______________________________
     
     public ChildPatient(
+            int id,
              String parent,
              String name,
              LocalDate dob,
@@ -34,6 +35,7 @@ public class ChildPatient extends Patient{
              LocalDate admitDate
     ){
         super(
+                id,
                 name, 
                 dob, 
                 family_doctor, 
