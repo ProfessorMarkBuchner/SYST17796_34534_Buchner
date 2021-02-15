@@ -22,11 +22,15 @@ public class WristBand {
     
     }//End C:*
     
+    public WristBand(Long barcode){
+     this.barcode = barcode; 
+    }//End C:*
+    
     //Getters:_________________________________________
     
     public Long getBarcode(){
         return barcode;
-    }
+    }//End G:*
     
     //Setters:_______________________________
     
