@@ -54,6 +54,7 @@ public class ResearchGroups {
         for(int i = 0; i < groupList.size(); i++){
             for(int j = 0; j < groupList.get(i).getPatientList().size(); j++){
                 if(groupList.get(i).getPatientList().get(j).getId() == tPatient.getId()){
+                    result = true;
                     duplicates += 1;
                 }//End I:*
             }//End F1:*
