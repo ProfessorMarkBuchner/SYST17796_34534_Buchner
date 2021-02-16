@@ -17,15 +17,15 @@ import java.util.ArrayList;
 public class Patient {
 
     //Fields:___________________________
-    private int id;
-    private String name;
-    private LocalDate dob;
-    private String family_doctor;
-    private ArrayList<String> medications;
-    private ArrayList<String> allergies;
-    private ArrayList<WristBand> bandList;
-    private WristBand basicBand;
-    private LocalDate admitDate;
+    protected int id;
+    protected String name;
+    protected LocalDate dob;
+    protected String family_doctor;
+    protected ArrayList<String> medications;
+    protected ArrayList<String> allergies;
+    protected ArrayList<WristBand> bandList;
+    protected WristBand basicBand;
+    protected LocalDate admitDate;
 
     //Constructors:_________________________
     
