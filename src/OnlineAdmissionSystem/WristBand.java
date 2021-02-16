@@ -7,13 +7,14 @@ package OnlineAdmissionSystem;
 
 /**
  *
- * @author aleks
+ * @author Aleks Lim @ Sheridan College 2021
  */
 public class WristBand {
     
     //Fields:_______________________________________
     
-    private Long barcode; 
+    protected Long barcode; 
+    protected Patient patient;
     
     //Constructors:__________________________________
     
@@ -22,7 +23,10 @@ public class WristBand {
     
     }//End C:*
     
-    public WristBand(Long barcode){
+    public WristBand(
+                     Long barcode,
+                     Patient patient
+                    ){
      this.barcode = barcode; 
     }//End C:*
     
@@ -37,5 +41,16 @@ public class WristBand {
     public void setBarcode(Long newB){
         this.barcode = newB; 
     }//End S:*
+    
+    
+    //Methods:________________________________
+    
+    public void printBand(){
+        System.out.println(
+                           patient.getName() + 
+                           " " + patient.getDob() +
+                           " " + patient.get_Family_Doctor()
+                           );
+    }//End M:*
     
 }//End Class:*
