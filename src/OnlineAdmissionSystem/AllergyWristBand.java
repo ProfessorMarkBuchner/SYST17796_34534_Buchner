@@ -7,7 +7,7 @@ package OnlineAdmissionSystem;
 
 /**
  *
- * @author aleks
+ * @author Aleks Lim @Sheridan College 2021
  */
 public class AllergyWristBand extends WristBand{
     
@@ -17,8 +17,20 @@ public class AllergyWristBand extends WristBand{
     
     }
     
-    public AllergyWristBand(Long barcode){
-        super(barcode);
+    public AllergyWristBand(
+                             Long barcode,
+                             Patient patient
+                            ){
+        super(
+                barcode,
+                patient
+              );
+    }//End C:*
+    
+    @Override
+    public void printBand(){
+    super.printBand();
+        System.out.println(patient.getAllergies());
     }
     
 }//End Class:*
