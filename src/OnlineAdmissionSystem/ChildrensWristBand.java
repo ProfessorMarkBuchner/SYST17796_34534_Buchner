@@ -11,4 +11,31 @@ package OnlineAdmissionSystem;
  */
 public class ChildrensWristBand extends WristBand{
     
-}
+   
+    
+    public ChildrensWristBand(){
+    
+    }//End C:*
+    
+    public ChildrensWristBand(
+                              Long barcode,
+                              ChildPatient patient
+                              ){
+        super(
+              barcode, 
+              patient
+              );
+    
+    }//End C:*
+    
+    @Override 
+    public void printBand(){
+    super.printBand();
+    if(patient instanceof ChildPatient){
+        ChildPatient converted = (ChildPatient) patient;
+        System.out.println(converted.getParent());
+    }//End I:*
+        
+    }//End M:*
+    
+}//End Class:*
