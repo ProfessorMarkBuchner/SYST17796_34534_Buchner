@@ -11,6 +11,7 @@ import java.util.Scanner;
 /**
  *
  * @author AllyCat @ Sheridan College 2021
+ * Note: this class could be static. This will save typing time. 
  */
 class UserInput {
     
