@@ -14,7 +14,8 @@ import java.time.Period;
  */
 public class ER_Admission {
     
-    private UserInput input;
+    //This var is just for usage and doesn't change 
+    private final UserInput input;
     
     //Fields:__________________________________________
     
@@ -22,7 +23,7 @@ public class ER_Admission {
     //Constructors:_____________________________________
     
     public ER_Admission(){
-    
+        input = new UserInput();
     }//End C:*
     
     //Getters:________________________________________
@@ -34,6 +35,10 @@ public class ER_Admission {
     //Methods:________________________________________________
     
     public static void main (String[] args){
+        
+        //Patient enters Er and provides dob 
+        //System.out.println("Can I have your name and date of birth please");
+        //System.out.println(LocalDate.now());
         
     }//End M:*
     
