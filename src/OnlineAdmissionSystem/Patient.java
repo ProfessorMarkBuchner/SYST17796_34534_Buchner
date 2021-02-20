@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * @author Aleks Lim was here @ Sheridan College 2021
  */
 //Class to model patients in an ER Admission System
-public class Patient {
+public abstract class Patient {
 
     //Fields:___________________________
     
@@ -22,6 +22,23 @@ public class Patient {
     protected String name;
     protected LocalDate dob;
     protected String family_doctor;
+    private String medicalProblem;
+
+    public String getFamily_doctor() {
+        return family_doctor;
+    }
+
+    public void setFamily_doctor(String family_doctor) {
+        this.family_doctor = family_doctor;
+    }
+
+    public String getMedicalProblem() {
+        return medicalProblem;
+    }
+
+    public void setMedicalProblem(String medicalProblem) {
+        this.medicalProblem = medicalProblem;
+    }
     protected ArrayList<String> medications;
     protected ArrayList<String> allergies;
     protected ArrayList<WristBand> bandList;
@@ -39,6 +56,7 @@ public class Patient {
             String name,
             LocalDate dob,
             String family_doctor,
+            String medicalProblem,
             ArrayList<String> medications,
             ArrayList<String> allergies,
             ArrayList<WristBand> bandList,
@@ -49,6 +67,7 @@ public class Patient {
         this.name = name;
         this.dob = dob;
         this.family_doctor = family_doctor;
+        this.medicalProblem = medicalProblem;
         this.medications = medications;
         this.allergies = allergies;
         this.bandList = bandList;
