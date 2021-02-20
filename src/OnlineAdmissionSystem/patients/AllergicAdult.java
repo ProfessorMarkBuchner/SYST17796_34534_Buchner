@@ -23,7 +23,6 @@ public class AllergicAdult extends AdultPatient{
              LocalDate dob,
              String family_doctor,
              String medicalProblem,
-             ArrayList<String> medications,
              ArrayList<WristBand> bandList,
              WristBand basicBand,
              LocalDate admitDate,
@@ -35,7 +34,6 @@ public class AllergicAdult extends AdultPatient{
                 dob, 
                 family_doctor, 
                 medicalProblem,
-                medications, 
                 bandList, 
                 basicBand, 
                 admitDate
