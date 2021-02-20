@@ -38,7 +38,7 @@ public class Printer {
         System.out.println(patient.getDob());
         System.out.println(patient.getAdmitDate());
         System.out.println(patient.get_Family_Doctor());
-        System.out.println(patient.getAllergies());
+        //System.out.println(patient.getAllergies());
     }//End M:*
     
     public void printChildrensBand(ChildPatient patient){
