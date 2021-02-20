@@ -24,7 +24,6 @@ public abstract class Patient {
     protected LocalDate dob;
     protected String family_doctor;
     private String medicalProblem;
-    protected ArrayList<String> medications;
     protected ArrayList<WristBand> bandList;
     protected WristBand basicBand;
     protected LocalDate admitDate;
@@ -45,7 +44,6 @@ public abstract class Patient {
             LocalDate dob,
             String family_doctor,
             String medicalProblem,
-            ArrayList<String> medications,
             ArrayList<WristBand> bandList,
             WristBand basicBand,
             LocalDate admitDate
@@ -56,7 +54,6 @@ public abstract class Patient {
         this.dob = dob;
         this.family_doctor = family_doctor;
         this.medicalProblem = medicalProblem;
-        this.medications = medications;
         this.bandList = bandList;
         this.admitDate = admitDate;
         numberOfPatients += 1;
@@ -84,11 +81,7 @@ public abstract class Patient {
         return family_doctor;
     }//End G:*
 
-    public ArrayList<String> getMedications() {
-        return medications;
-    }//End G:*
-
-  
+    
 
     public ArrayList<WristBand> getBandList() {
         return bandList;
@@ -134,10 +127,7 @@ public abstract class Patient {
         this.family_doctor = newFD;
     }//End S:*
 
-    public void setMedications(ArrayList<String> newMs) {
-        this.medications = newMs;
-    }//End S:*
-
+  
    
 
     public void setBandList(ArrayList<WristBand> newBLs) {
