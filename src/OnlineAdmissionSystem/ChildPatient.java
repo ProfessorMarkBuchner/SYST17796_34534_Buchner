@@ -42,7 +42,6 @@ public class ChildPatient extends Patient{
                 family_doctor, 
                 medicalProblem,
                 medications, 
-                allergies, 
                 bandList, 
                 basicBand, 
                 admitDate
