@@ -7,9 +7,9 @@ package OnlineAdmissionSystem;
 
 /**
  *
- * @author Aleks Lim @ Sheridan College 2021
+ * @author AllyCat @ Sheridan College 2021
  */
-public class WristBand {
+public abstract class WristBand {
     
     //Fields:_______________________________________
     
