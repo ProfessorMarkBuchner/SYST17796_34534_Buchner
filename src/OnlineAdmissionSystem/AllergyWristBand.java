@@ -30,7 +30,7 @@ public class AllergyWristBand extends WristBand{
     @Override
     public void printBand(){
     super.printBand();
-        System.out.println(patient.getAllergies());
+        //System.out.println(patient.getAllergies());
     }
     
 }//End Class:*
