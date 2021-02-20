@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Aleks Lim @ Sheridan College 2021
+ * @author AllyCat @ Sheridan College 2021
  */
 public class AdultPatient extends Patient{
     
