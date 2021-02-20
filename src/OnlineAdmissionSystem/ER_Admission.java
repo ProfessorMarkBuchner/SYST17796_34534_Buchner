@@ -18,7 +18,7 @@ public class ER_Admission {
     
     public ER_Admission(){
     
-    }
+    }//End C:*
     
     //Getters:________________________________________
     
@@ -27,5 +27,9 @@ public class ER_Admission {
     
     
     //Methods:________________________________________________
+    
+    public static void main (String[] args){
+        
+    }//End M:*
     
 }//End Class:*
