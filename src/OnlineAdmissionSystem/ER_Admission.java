@@ -5,11 +5,16 @@
  */
 package OnlineAdmissionSystem;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 /**
  *
- * @author aleks
+ * @author Aleks Lim @ Sheridan College 2021
  */
 public class ER_Admission {
+    
+    private UserInput input;
     
     //Fields:__________________________________________
     
@@ -30,6 +35,16 @@ public class ER_Admission {
     
     public static void main (String[] args){
         
+    }//End M:*
+    
+    public boolean isAdult(LocalDate dob) {
+       boolean result = false;
+       LocalDate present = LocalDate.now();
+       Period p = Period.between(dob, present);
+       if(p.getYears() >= 18){
+           result = true; 
+       }//End I:*
+        return result;
     }//End M:*
     
 }//End Class:*
