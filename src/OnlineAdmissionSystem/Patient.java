@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * This class represents students in our application
  *
- * @author Aleks Lim was here @ Sheridan College 2021
+ * @author AllyCat was here @ Sheridan College 2021
  */
 //Class to model patients in an ER Admission System
 public abstract class Patient {
@@ -23,33 +23,20 @@ public abstract class Patient {
     protected LocalDate dob;
     protected String family_doctor;
     private String medicalProblem;
-
-    public String getFamily_doctor() {
-        return family_doctor;
-    }
-
-    public void setFamily_doctor(String family_doctor) {
-        this.family_doctor = family_doctor;
-    }
-
-    public String getMedicalProblem() {
-        return medicalProblem;
-    }
-
-    public void setMedicalProblem(String medicalProblem) {
-        this.medicalProblem = medicalProblem;
-    }
     protected ArrayList<String> medications;
-    protected ArrayList<String> allergies;
     protected ArrayList<WristBand> bandList;
     protected WristBand basicBand;
     protected LocalDate admitDate;
+    private static int numberOfPatients;
+
+    
 
     //Constructors:_________________________
     
     public Patient() {
+        numberOfPatients += 1;
         
-    }
+    }//End C:*
 
     public Patient(
             int id,
@@ -58,24 +45,28 @@ public abstract class Patient {
             String family_doctor,
             String medicalProblem,
             ArrayList<String> medications,
-            ArrayList<String> allergies,
             ArrayList<WristBand> bandList,
             WristBand basicBand,
             LocalDate admitDate
-    ) {
+                    ) {
+        
         this.id = id;
         this.name = name;
         this.dob = dob;
         this.family_doctor = family_doctor;
         this.medicalProblem = medicalProblem;
         this.medications = medications;
-        this.allergies = allergies;
         this.bandList = bandList;
         this.admitDate = admitDate;
-
+        numberOfPatients += 1;
+        
     }//End M:*
 
-    //Getters:______________________________
+    //Getters & Setters:______________________________
+    
+    public static int getNumberOfPatients() {
+        return numberOfPatients;
+    }//End G:*
     
     public int getId(){
     return id;
@@ -96,9 +87,7 @@ public abstract class Patient {
         return medications;
     }//End G:*
 
-    public ArrayList<String> getAllergies() {
-        return allergies;
-    }//End G:*
+  
 
     public ArrayList<WristBand> getBandList() {
         return bandList;
@@ -111,9 +100,23 @@ public abstract class Patient {
     public LocalDate getAdmitDate() {
         return admitDate;
     }//End G:*
-
-    //Setters:__________________________
     
+    public String getFamily_doctor() {
+        return family_doctor;
+    }
+
+    public void setFamily_doctor(String family_doctor) {
+        this.family_doctor = family_doctor;
+    }
+
+    public String getMedicalProblem() {
+        return medicalProblem;
+    }
+
+    public void setMedicalProblem(String medicalProblem) {
+        this.medicalProblem = medicalProblem;
+    }
+
     public void setId(int newId){
         this.id = newId;
     }//End S:*
@@ -134,9 +137,7 @@ public abstract class Patient {
         this.medications = newMs;
     }//End S:*
 
-    public void setAllergies(ArrayList<String> newAs) {
-        this.allergies = newAs;
-    }//End S:*
+   
 
     public void setBandList(ArrayList<WristBand> newBLs) {
         this.bandList = newBLs;
@@ -152,6 +153,28 @@ public abstract class Patient {
 
     //Methods:_______________________________
     
-    
+    /*
+    protected int id;
+    protected String name;
+    protected LocalDate dob;
+    protected String family_doctor;
+    private String medicalProblem;
+    protected ArrayList<String> medications;
+    protected ArrayList<String> allergies;
+    protected ArrayList<WristBand> bandList;
+    protected WristBand basicBand;
+    protected LocalDate admitDate;
+    private static int numberOfPatients;
+    */
+    public void print(){
+        System.out.println(
+                           id + " " + "|" + " " +
+                           name + " " + "|" + " " +
+                           dob + " " + "|" + " " + 
+                           family_doctor + " " + "|" +
+                           medicalProblem + " " + "|" +
+                           admitDate
+                           );
+    }//End M:*
 
 }//End Class:_____________________________
