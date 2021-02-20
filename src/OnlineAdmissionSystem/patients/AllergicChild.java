@@ -5,12 +5,20 @@
  */
 package OnlineAdmissionSystem.patients;
 
-import OnlineAdmissionSystem.patients.ChildPatient;
+import java.util.ArrayList;
+
+
 
 /**
  *
- * @author aleks
+ * @author AllyCat @ Sheridan College 2021
  */
 public class AllergicChild extends ChildPatient{
     
-}
+    protected ArrayList<String> allergies;
+    
+    public AllergicChild(){
+    
+    }
+    
+}//End Class:*
