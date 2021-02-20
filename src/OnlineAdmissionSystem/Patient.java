@@ -6,6 +6,7 @@
 package OnlineAdmissionSystem;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 
 /**
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 public class Patient {
 
     //Fields:___________________________
+    
     protected int id;
     protected String name;
     protected LocalDate dob;
@@ -130,10 +132,8 @@ public class Patient {
         this.admitDate = newAD;
     }//End S:*
 
-    //Methods
-    public boolean checkAge() {
-        boolean result = false;
-        return result;
-    }//End M:*
+    //Methods:_______________________________
+    
+    
 
 }//End Class:_____________________________
