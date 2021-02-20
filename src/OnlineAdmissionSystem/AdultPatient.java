@@ -26,7 +26,6 @@ public class AdultPatient extends Patient{
              String family_doctor,
              String medicalProblem,
              ArrayList<String> medications,
-             ArrayList<String> allergies,
              ArrayList<WristBand> bandList,
              WristBand basicBand,
              LocalDate admitDate
@@ -38,7 +37,6 @@ public class AdultPatient extends Patient{
                 family_doctor, 
                 medicalProblem,
                 medications, 
-                allergies, 
                 bandList, 
                 basicBand, 
                 admitDate
