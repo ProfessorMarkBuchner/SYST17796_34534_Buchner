@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Aleks Lim was here @ Sheridan College 2021
+ * @author AllyCat13 was here @ Sheridan College 2021
  */
 
 //Class to model children as different type of patient 
@@ -31,7 +31,6 @@ public class ChildPatient extends Patient{
              LocalDate dob,
              String family_doctor,
              String medicalProblem,
-             ArrayList<String> medications,
              ArrayList<WristBand> bandList,
              WristBand basicBand,
              LocalDate admitDate
@@ -42,7 +41,6 @@ public class ChildPatient extends Patient{
                 dob, 
                 family_doctor, 
                 medicalProblem,
-                medications, 
                 bandList, 
                 basicBand, 
                 admitDate
