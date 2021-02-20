@@ -5,9 +5,9 @@
  */
 package OnlineAdmissionSystem.patients;
 
+import OnlineAdmissionSystem.wristbands.WristBand;
+import java.time.LocalDate;
 import java.util.ArrayList;
-
-
 
 /**
  *
@@ -17,8 +17,32 @@ public class AllergicChild extends ChildPatient{
     
     protected ArrayList<String> allergies;
     
-    public AllergicChild(){
-    
+    public AllergicChild(
+             int id,
+             String parent,
+             String name,
+             LocalDate dob,
+             String family_doctor,
+             String medicalProblem,
+             ArrayList<String> medications,
+             ArrayList<WristBand> bandList,
+             WristBand basicBand,
+             LocalDate admitDate,
+             ArrayList<String> allergies
+            ){
+        super(
+                id,
+                parent,
+                name, 
+                dob, 
+                family_doctor, 
+                medicalProblem,
+                medications, 
+                bandList, 
+                basicBand, 
+                admitDate
+        );
+        this.allergies = allergies; 
     }
     
 }//End Class:*
