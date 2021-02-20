@@ -5,6 +5,11 @@
  */
 package OnlineAdmissionSystem;
 
+import OnlineAdmissionSystem.input.UserInput;
+import OnlineAdmissionSystem.wristbands.WristBand;
+import OnlineAdmissionSystem.patients.AdultPatient;
+import OnlineAdmissionSystem.patients.ChildPatient;
+import OnlineAdmissionSystem.patients.Patient;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.Scanner;
