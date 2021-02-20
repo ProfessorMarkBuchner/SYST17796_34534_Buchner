@@ -6,7 +6,6 @@
 package OnlineAdmissionSystem.patients;
 
 import OnlineAdmissionSystem.wristbands.WristBand;
-import OnlineAdmissionSystem.patients.Patient;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
