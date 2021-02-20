@@ -5,10 +5,41 @@
  */
 package OnlineAdmissionSystem.patients;
 
+import OnlineAdmissionSystem.wristbands.WristBand;
+import java.time.LocalDate;
+import java.util.ArrayList;
+
 /**
  *
  * @author AllyCat @ Sheridan College 2021
  */
 public class MedicatedAdult extends AdultPatient{
+    
+    protected ArrayList<String> medications;
+    
+    public MedicatedAdult(
+             int id,
+             String name,
+             LocalDate dob,
+             String family_doctor,
+             String medicalProblem,
+             ArrayList<WristBand> bandList,
+             WristBand basicBand,
+             LocalDate admitDate,
+             ArrayList<String> medications
+             ){
+        super(
+                id,
+                name, 
+                dob, 
+                family_doctor, 
+                medicalProblem,
+                bandList, 
+                basicBand, 
+                admitDate
+        );
+        this.medications = medications; 
+        
+    }//End C:*
     
 }//End Class:*
