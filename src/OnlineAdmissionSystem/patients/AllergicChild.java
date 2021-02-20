@@ -24,7 +24,6 @@ public class AllergicChild extends ChildPatient{
              LocalDate dob,
              String family_doctor,
              String medicalProblem,
-             ArrayList<String> medications,
              ArrayList<WristBand> bandList,
              WristBand basicBand,
              LocalDate admitDate,
@@ -37,7 +36,6 @@ public class AllergicChild extends ChildPatient{
                 dob, 
                 family_doctor, 
                 medicalProblem,
-                medications, 
                 bandList, 
                 basicBand, 
                 admitDate
