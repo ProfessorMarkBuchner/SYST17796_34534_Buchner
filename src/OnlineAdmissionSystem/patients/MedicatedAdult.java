@@ -17,6 +17,15 @@ public class MedicatedAdult extends AdultPatient{
     
     protected ArrayList<String> medications;
     
+    
+    //Constructors:___________________________
+    
+
+    public MedicatedAdult() {
+        
+    }//End C:*
+
+    
     public MedicatedAdult(
              int id,
              String name,
@@ -41,5 +50,25 @@ public class MedicatedAdult extends AdultPatient{
         this.medications = medications; 
         
     }//End C:*
+    
+    //Getters & Setters:__________________________
+    
+     public ArrayList<String> getMedications() {
+        return medications;
+    }
+
+    public void setMedications(ArrayList<String> medications) {
+        this.medications = medications;
+    }
+    
+    //Methods:____________________________
+    
+    @Override
+    public void print(){
+        super.print();
+        for(int i = 0; i < medications.size(); i++){
+            System.out.println(medications.get(i));
+        }//End F:*
+    }//End M:*
     
 }//End Class:*
