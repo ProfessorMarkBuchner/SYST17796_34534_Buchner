@@ -143,28 +143,6 @@ public abstract class Patient {
 
     //Methods:_______________________________
     
-    /*
-    protected int id;
-    protected String name;
-    protected LocalDate dob;
-    protected String family_doctor;
-    private String medicalProblem;
-    protected ArrayList<String> medications;
-    protected ArrayList<String> allergies;
-    protected ArrayList<WristBand> bandList;
-    protected WristBand basicBand;
-    protected LocalDate admitDate;
-    private static int numberOfPatients;
-    */
-    public void print(){
-        System.out.println(
-                           id + " " + "|" + " " +
-                           name + " " + "|" + " " +
-                           dob + " " + "|" + " " + 
-                           family_doctor + " " + "|" +
-                           medicalProblem + " " + "|" +
-                           admitDate
-                           );
-    }//End M:*
+   
 
 }//End Class:_____________________________
