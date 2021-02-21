@@ -5,6 +5,8 @@
  */
 package OnlineAdmissionSystem.patients;
 
+//Imports:_________________________
+
 import OnlineAdmissionSystem.wristbands.WristBand;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -40,6 +42,7 @@ public class AdultPatient extends Patient{
                 basicBand, 
                 admitDate
         );
-    }
+        
+    }//End C:*
    
 }//End Class:*
