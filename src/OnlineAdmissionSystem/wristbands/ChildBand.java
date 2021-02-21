@@ -12,9 +12,7 @@ import OnlineAdmissionSystem.patients.ChildPatient;
  * @author aleks
  */
 public class ChildBand extends WristBand{
-    
    
-    
     public ChildBand(){
     
     }//End C:*
@@ -33,8 +31,8 @@ public class ChildBand extends WristBand{
     @Override 
     public void print(){
     super.print();
-    if(patient instanceof ChildPatient){
-        ChildPatient converted = (ChildPatient) patient;
+    if(this.patient instanceof ChildPatient){
+        ChildPatient converted = (ChildPatient)this.patient;
         System.out.println(converted.getParent());
     }//End I:*
         
