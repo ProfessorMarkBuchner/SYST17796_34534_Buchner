@@ -10,7 +10,7 @@ package OnlineAdmissionSystem.wristbands;
  * @author AllyCat13 Sheridan High 2021
  */
 
-public class AllergicMedicatedChildBand extends WristBand{
+public class AllergicMedicatedChildBand extends AllergicChildBand{
 
     public AllergicMedicatedChildBand() {
         
