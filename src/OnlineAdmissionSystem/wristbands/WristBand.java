@@ -47,7 +47,7 @@ public abstract class WristBand {
     
     //Methods:________________________________
     
-    public void printBand(){
+    public void print(){
         System.out.println(
                            patient.getName() + 
                            " " + patient.getDob() +
