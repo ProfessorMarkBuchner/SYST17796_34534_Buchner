@@ -67,12 +67,6 @@ public class AllergicChild extends ChildPatient{
     
     //Methods:________________________________
     
-    @Override
-    public void print(){
-        super.print();
-        for(int i = 0; i < allergies.size(); i++){
-            System.out.println(allergies.get(i));
-        }//End F:*
-    }//End M:*
+  
     
 }//End Class:*
