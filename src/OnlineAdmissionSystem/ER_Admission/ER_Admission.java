@@ -5,21 +5,27 @@
  */
 package OnlineAdmissionSystem.ER_Admission;
 
+//Imports:_____________________________________
+
+
 import OnlineAdmissionSystem.input.UserInput;
 import OnlineAdmissionSystem.wristbands.WristBand;
 import OnlineAdmissionSystem.patients.AdultPatient;
+import OnlineAdmissionSystem.patients.AllergicAdult;
 import OnlineAdmissionSystem.patients.ChildPatient;
+import OnlineAdmissionSystem.patients.AllergicChild;
+import OnlineAdmissionSystem.patients.AllergicMedicatedAdult;
+import OnlineAdmissionSystem.patients.AllergicMedicatedChild;
 import OnlineAdmissionSystem.patients.Patient;
 import java.time.LocalDate;
 import java.time.Period;
-import java.util.Scanner;
 
 
 
 /**
  *
  * @author AllyCat @ Sheridan College 2021
- * Can't do UML until the programs complete.
+ * Can't do UML until the programs complete. it's a subsequent task.
  */
 
 /*
@@ -83,10 +89,37 @@ public class ER_Admission {
     
     public static void main (String[] args){
         
+        //A: Create 
         ER_Admission er = new ER_Admission();
         IntakeForm form = new IntakeForm();
         
+        //B: Gather 
+       form.askForItAll();
        
+       //C: Check 
+       
+       /*
+       Goes: above 18 | meds | allergies | research
+       */
+       
+       if(form.isAbove18()){
+           er.setPatient(new ChildPatient());
+           if(form.isAllergies()){
+               er.setPatient(new AllergicChild());
+               if(form.isMedications()){
+                er.setPatient(new AllergicMedicatedChild());
+               }//End I:*
+           }//End I:*
+       }//End I:*
+       else {
+          er.setPatient(new AdultPatient());
+          if(form.isAllergies()){
+               er.setPatient(new AllergicAdult());
+               if(form.isMedications()){
+                er.setPatient(new AllergicMedicatedAdult());
+               }//End I:*
+           }//End I:*
+       }//End I:*
        
         
     }//End M:*
