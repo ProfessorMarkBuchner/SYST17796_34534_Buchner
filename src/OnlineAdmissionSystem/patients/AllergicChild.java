@@ -5,6 +5,9 @@
  */
 package OnlineAdmissionSystem.patients;
 
+//Imports:______________________________
+
+
 import OnlineAdmissionSystem.wristbands.WristBand;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -14,8 +17,17 @@ import java.util.ArrayList;
  * @author AllyCat @ Sheridan College 2021
  */
 public class AllergicChild extends ChildPatient{
+
+    
     
     protected ArrayList<String> allergies;
+
+    //Constructors:________________________________
+    
+    public AllergicChild() {
+        
+    }//End C:*
+    
     
     public AllergicChild(
              int id,
@@ -41,6 +53,26 @@ public class AllergicChild extends ChildPatient{
                 admitDate
         );
         this.allergies = allergies; 
-    }
+    }//End C:*
+    
+    //Getters & Setters:____________________
+    
+    public ArrayList<String> getAllergies() {
+        return allergies;
+    }//End G:*
+
+    public void setAllergies(ArrayList<String> allergies) {
+        this.allergies = allergies;
+    }//End S:*
+    
+    //Methods:________________________________
+    
+    @Override
+    public void print(){
+        super.print();
+        for(int i = 0; i < allergies.size(); i++){
+            System.out.println(allergies.get(i));
+        }//End F:*
+    }//End M:*
     
 }//End Class:*
