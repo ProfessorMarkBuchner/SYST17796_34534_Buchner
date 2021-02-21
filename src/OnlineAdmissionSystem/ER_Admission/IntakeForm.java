@@ -6,6 +6,7 @@
 package OnlineAdmissionSystem.ER_Admission;
 
 import OnlineAdmissionSystem.input.UserInput;
+import java.util.Scanner;
 
 /**
  *
@@ -13,12 +14,11 @@ import OnlineAdmissionSystem.input.UserInput;
  */
 public class IntakeForm {
     
+    //A: Questions
     private boolean medications;
     private boolean allergies; 
-    private boolean adult;
-    private boolean child; 
     private boolean researchSubject;
-    
+    //B: Utility 
     private final UserInput input;
 
     //Constructors:________________
@@ -31,16 +31,13 @@ public class IntakeForm {
     public IntakeForm(
                       boolean medications, 
                       boolean allergies, 
-                      boolean adult, 
-                      boolean child, 
                       boolean researchSubject
     ) {
         this.medications = medications;
         this.allergies = allergies;
-        this.adult = adult;
-        this.child = child;
         this.researchSubject = researchSubject;
         this.input = new UserInput();
+        
     }//End C:*
     
     //Getters & Setters:_______________________
@@ -60,23 +57,6 @@ public class IntakeForm {
     public void setAllergies(boolean allergies) {
         this.allergies = allergies;
     }
-
-    public boolean isAdult() {
-        return adult;
-    }
-
-    public void setAdult(boolean adult) {
-        this.adult = adult;
-    }
-
-    public boolean isChild() {
-        return child;
-    }
-
-    public void setChild(boolean child) {
-        this.child = child;
-    }
-
     public boolean isResearchSubject() {
         return researchSubject;
     }
@@ -88,6 +68,23 @@ public class IntakeForm {
     //Methods:________________________________________
     
     
+    private void askForItAll(){
+        System.out.println("Do you take any prescription medications?");
+        String q1 =  input.promptStringUser(new Scanner(System.in));
+        if(q1.equals("yes")){
+            this.setMedications(true);
+        }//End I:*
+        System.out.println("Are you allergic to any medications or any allergies in general?");
+        String q2 =  input.promptStringUser(new Scanner(System.in));
+        if(q2.equals("yes")){
+            this.setAllergies(true);
+        }//End I:*
+        System.out.println("Are you willing to participate in any research groups?");
+        String q3 =  input.promptStringUser(new Scanner(System.in));
+        if(q3.equals("yes")){
+            this.setResearchSubject(true);
+        }//End I:*
+    }//End M:*
     
-    
+  
 }//End C:*
