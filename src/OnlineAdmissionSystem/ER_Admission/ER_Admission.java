@@ -87,6 +87,7 @@ public class ER_Admission {
     
     //Methods:________________________________________________
     
+    //Program Starter 
     public static void main (String[] args){
         
         //A: Create 
@@ -121,6 +122,7 @@ public class ER_Admission {
            }//End I:*
        }//End I:*
        
+       //D: Set Bands 
         
     }//End M:*
     
@@ -136,4 +138,4 @@ public class ER_Admission {
     
 
     
-}//End Class:*
+}//End Class:_____________________________
