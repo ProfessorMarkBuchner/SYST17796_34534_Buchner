@@ -11,6 +11,7 @@ import java.util.Scanner;
 /**
  *
  * @author AllyCat @ Sheridan College 2021
+ * OOP couples data with methods into objects.
  */
 public class IntakeForm {
     
@@ -19,6 +20,7 @@ public class IntakeForm {
     private boolean allergies; 
     private boolean above18;
     private boolean researchSubject;
+    
     //B: Utility 
     private final UserInput input;
 
@@ -80,25 +82,29 @@ public class IntakeForm {
     //Methods:________________________________________
     
     
-    private void askForItAll(){
+    public void askForItAll(){
+        
         //A: Q1
-        System.out.println("Do you take any prescription medications?");
+        System.out.println("Are you above 18?");
         String q1 =  input.promptStringUser(new Scanner(System.in));
         if(q1.equals("yes")){
-            this.setMedications(true);
-        }//End I:*
-        //B: Q2
-        System.out.println("Are you allergic to any medications or any allergies in general?");
-        String q2 =  input.promptStringUser(new Scanner(System.in));
-        if(q2.equals("yes")){
-            this.setAllergies(true);
-        }//End I:*
-        //C: Q3
-        System.out.println("Are you above 18?");
-        String q3 =  input.promptStringUser(new Scanner(System.in));
-        if(q2.equals("yes")){
             this.setAbove18(true);
         }//End I:*
+    
+        //B: Q2
+        System.out.println("Do you take any prescription medications?");
+        String q2 =  input.promptStringUser(new Scanner(System.in));
+        if(q2.equals("yes")){
+            this.setMedications(true);
+        }//End I:*
+        
+        //C: Q3
+        System.out.println("Are you allergic to any medications or any allergies in general?");
+        String q3 =  input.promptStringUser(new Scanner(System.in));
+        if(q3.equals("yes")){
+            this.setAllergies(true);
+        }//End I:*
+        
         //D: Q4
         System.out.println("Are you willing to participate in any research groups?");
         String q4 =  input.promptStringUser(new Scanner(System.in));
