@@ -68,10 +68,5 @@ public class ChildPatient extends Patient{
     
     //Methods:___________________________
     
-    @Override
-    public void print(){
-        super.print();
-        System.out.println(" " + parent);
-    }//End M:*
-    
+ 
 }//End Class:________________________
