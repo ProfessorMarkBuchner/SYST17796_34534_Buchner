@@ -16,6 +16,13 @@ import java.util.ArrayList;
 public class AllergicMedicatedChild extends AllergicChild{
     
     protected ArrayList<String> medications; 
+
+    //Constructors:____________________________
+    
+    public AllergicMedicatedChild() {
+        
+    }//End C:*
+    
     
     public AllergicMedicatedChild(int id,
              String parent,
@@ -42,5 +49,27 @@ public class AllergicMedicatedChild extends AllergicChild{
         );//End SU:*
     this.medications = medications;
     }//End C:*
+    
+    //Getters & Setters:_________________________
+    
+    
+    public ArrayList<String> getMedications() {
+        return medications;
+    }
+
+    public void setMedications(ArrayList<String> medications) {
+        this.medications = medications;
+    }
+    
+    //Methods:__________________________________
+
+    @Override
+    public void print(){
+        super.print();
+        for(int i = 0; i < medications.size(); i++){
+            System.out.println(medications.get(i));
+        }//End F:*
+    }//End M:*
+    
     
 }//End Class:*
