@@ -63,12 +63,6 @@ public class MedicatedAdult extends AdultPatient{
     
     //Methods:____________________________
     
-    @Override
-    public void print(){
-        super.print();
-        for(int i = 0; i < medications.size(); i++){
-            System.out.println(medications.get(i));
-        }//End F:*
-    }//End M:*
+ 
     
 }//End Class:*
