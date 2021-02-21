@@ -5,14 +5,18 @@
  */
 package OnlineAdmissionSystem.patients;
 
-import OnlineAdmissionSystem.wristbands.WristBand;
+//Imports:_________________________
 
+import OnlineAdmissionSystem.wristbands.WristBand;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
  *
  * @author AllyCat13 was here @ Sheridan College 2021
+ * OOP couples together data and methods into classes.
+ * Can't do UML until whole program is complete. 
+ * It's part of the documentation phase. 
  */
 
 //Class to model children as different type of patient 
@@ -23,6 +27,10 @@ public class ChildPatient extends Patient{
     private String parent;
     
     //Constructors:_______________________________
+    
+    public ChildPatient(){
+        
+    }//End C:*
     
     public ChildPatient(
             int id,
@@ -46,13 +54,8 @@ public class ChildPatient extends Patient{
                 admitDate
         );
         this.parent = parent; 
+        
     }//End C:*
-    
-    //No Arg Constructor 
-    public ChildPatient(){
-    
-    }//End C:*
-    
     
     //Getters:___________________________
     
@@ -63,6 +66,12 @@ public class ChildPatient extends Patient{
     public void setParent(String newParent){ this.parent = newParent;}
     
     
+    //Methods:___________________________
     
+    @Override
+    public void print(){
+        super.print();
+        System.out.println(" " + parent);
+    }//End M:*
     
 }//End Class:________________________
