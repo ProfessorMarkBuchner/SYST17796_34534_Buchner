@@ -5,12 +5,16 @@
  */
 package OnlineAdmissionSystem.patients;
 
+
+//Imports:________________________
+
 import OnlineAdmissionSystem.wristbands.WristBand;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
  * This class represents students in our application
+ * Patient in a nutshell 
  *
  * @author AllyCat was here @ Sheridan College 2021
  */
@@ -29,8 +33,7 @@ public abstract class Patient {
     protected LocalDate admitDate;
     private static int numberOfPatients;
 
-    
-
+ 
     //Constructors:_________________________
     
     public Patient() {
@@ -69,6 +72,7 @@ public abstract class Patient {
     public int getId(){
     return id;
     }//End G:*
+    
     public String getName() {
         return name;
     }//End G:*
@@ -80,8 +84,6 @@ public abstract class Patient {
     public String get_Family_Doctor() {
         return family_doctor;
     }//End G:*
-
-    
 
     public ArrayList<WristBand> getBandList() {
         return bandList;
@@ -126,9 +128,6 @@ public abstract class Patient {
     public void set_Family_Doctor(String newFD) {
         this.family_doctor = newFD;
     }//End S:*
-
-  
-   
 
     public void setBandList(ArrayList<WristBand> newBLs) {
         this.bandList = newBLs;
