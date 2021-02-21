@@ -17,6 +17,7 @@ public class IntakeForm {
     //A: Questions
     private boolean medications;
     private boolean allergies; 
+    private boolean above18;
     private boolean researchSubject;
     //B: Utility 
     private final UserInput input;
@@ -31,11 +32,13 @@ public class IntakeForm {
     public IntakeForm(
                       boolean medications, 
                       boolean allergies, 
+                      boolean above18,
                       boolean researchSubject
     ) {
         this.medications = medications;
         this.allergies = allergies;
         this.researchSubject = researchSubject;
+        this.above18 = above18;
         this.input = new UserInput();
         
     }//End C:*
@@ -64,27 +67,45 @@ public class IntakeForm {
     public void setResearchSubject(boolean researchSubject) {
         this.researchSubject = researchSubject;
     }
+
+    public boolean isAbove18() {
+        return above18;
+    }
+
+    public void setAbove18(boolean above18) {
+        this.above18 = above18;
+    }
+    
     
     //Methods:________________________________________
     
     
     private void askForItAll(){
+        //A: Q1
         System.out.println("Do you take any prescription medications?");
         String q1 =  input.promptStringUser(new Scanner(System.in));
         if(q1.equals("yes")){
             this.setMedications(true);
         }//End I:*
+        //B: Q2
         System.out.println("Are you allergic to any medications or any allergies in general?");
         String q2 =  input.promptStringUser(new Scanner(System.in));
         if(q2.equals("yes")){
             this.setAllergies(true);
         }//End I:*
-        System.out.println("Are you willing to participate in any research groups?");
+        //C: Q3
+        System.out.println("Are you above 18?");
         String q3 =  input.promptStringUser(new Scanner(System.in));
-        if(q3.equals("yes")){
+        if(q2.equals("yes")){
+            this.setAbove18(true);
+        }//End I:*
+        //D: Q4
+        System.out.println("Are you willing to participate in any research groups?");
+        String q4 =  input.promptStringUser(new Scanner(System.in));
+        if(q4.equals("yes")){
             this.setResearchSubject(true);
         }//End I:*
     }//End M:*
     
   
-}//End C:*
+}//End Class:______________________________
