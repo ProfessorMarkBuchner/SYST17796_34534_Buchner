@@ -5,6 +5,9 @@
  */
 package OnlineAdmissionSystem.patients;
 
+//Imports:______________________________
+
+
 import OnlineAdmissionSystem.wristbands.WristBand;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -15,7 +18,14 @@ import java.util.ArrayList;
  */
 public class AllergicAdult extends AdultPatient{
     
-    protected ArrayList<String> allergies;
+   protected ArrayList<String> allergies;
+
+   //Constructors:____________________________
+   
+   
+    public AllergicAdult() {
+        
+    }//End C:*
     
    public AllergicAdult(
              int id,
@@ -40,5 +50,26 @@ public class AllergicAdult extends AdultPatient{
         );
        this.allergies = allergies;
    }//End C:*
+   
+   //Getters & Setters:_____________________
+
+    public ArrayList<String> getAllergies() {
+        return allergies;
+    }
+
+    public void setAllergies(ArrayList<String> allergies) {
+        this.allergies = allergies;
+    }
+   
+   //Methods:_________________________--
+   
+   //Isn't this multiple inheritance?
+   @Override
+   public void print(){
+       super.print();
+       for(int i = 0; i < allergies.size(); i++){
+           System.out.println(allergies.get(i));
+       }//End F:*
+   }//End M:*
     
 }//End Class:*
