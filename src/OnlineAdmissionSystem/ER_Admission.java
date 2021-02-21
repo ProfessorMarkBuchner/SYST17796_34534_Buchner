@@ -37,6 +37,8 @@ public class ER_Admission {
     private Patient patient;
     private WristBand wristBand;
     private LocalDate dob;
+    
+    
   
 
     
@@ -162,5 +164,7 @@ public class ER_Admission {
         this.patient.setId(this.patient.getNumberOfPatients() + 1);
         this.patient.setMedicalProblem(input.promptStringUser(new Scanner(System.in)));
     }
+    
+    
     
 }//End Class:*
