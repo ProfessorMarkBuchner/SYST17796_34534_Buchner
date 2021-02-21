@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Aleks Lim @ Sheridan College 2021 
+ * @author AllyCat13 @ Sheridan College 2021 
  */
-public class ResearchGroups {
+public abstract class ResearchGroups {
     
     
     //Fields
