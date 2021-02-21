@@ -63,13 +63,6 @@ public class AllergicAdult extends AdultPatient{
    
    //Methods:_________________________--
    
-   //Isn't this multiple inheritance?
-   @Override
-   public void print(){
-       super.print();
-       for(int i = 0; i < allergies.size(); i++){
-           System.out.println(allergies.get(i));
-       }//End F:*
-   }//End M:*
+  
     
 }//End Class:*
