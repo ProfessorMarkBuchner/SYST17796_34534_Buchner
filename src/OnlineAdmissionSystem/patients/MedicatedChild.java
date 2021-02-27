@@ -24,7 +24,6 @@ public class MedicatedChild extends ChildPatient{
     }//End C:*
     
     public MedicatedChild(
-             int id,
              String parent,
              String name,
              LocalDate dob,
@@ -35,7 +34,6 @@ public class MedicatedChild extends ChildPatient{
              ArrayList<String> medications
             ){
         super(
-                id,
                 name, 
                 parent,
                 dob, 
