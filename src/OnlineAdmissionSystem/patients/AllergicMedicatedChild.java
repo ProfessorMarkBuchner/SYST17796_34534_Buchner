@@ -32,11 +32,9 @@ public class AllergicMedicatedChild extends AllergicChild{
              String medicalProblem,
              ArrayList<WristBand> bandList,
              WristBand basicBand,
-             LocalDate admitDate,
              ArrayList<String> allergies,
              ArrayList<String> medications){
         super(
-                id,
                 parent,
                 name, 
                 dob, 
@@ -44,7 +42,6 @@ public class AllergicMedicatedChild extends AllergicChild{
                 medicalProblem,
                 bandList, 
                 basicBand, 
-                admitDate,
                 allergies
         );//End SU:*
     this.medications = medications;
