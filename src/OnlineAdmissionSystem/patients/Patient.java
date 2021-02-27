@@ -42,7 +42,6 @@ public abstract class Patient {
     }//End C:*
 
     public Patient(
-            int id,
             String name,
             LocalDate dob,
             String family_doctor,
@@ -51,7 +50,7 @@ public abstract class Patient {
             WristBand basicBand
                     ) {
         
-        this.id = id;
+        this.id = Patient.numberOfPatients;
         this.name = name;
         this.dob = dob;
         this.family_doctor = family_doctor;
@@ -63,14 +62,13 @@ public abstract class Patient {
     }//End M:*
     
     public Patient(
-            int id,
             String name,
             LocalDate dob,
             String family_doctor,
             String medicalProblem
                     ) {
         
-        this.id = id;
+        this.id = Patient.numberOfPatients;
         this.name = name;
         this.dob = dob;
         this.family_doctor = family_doctor;
