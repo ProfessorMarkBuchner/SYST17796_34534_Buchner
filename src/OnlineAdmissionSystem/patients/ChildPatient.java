@@ -32,6 +32,7 @@ public class ChildPatient extends Patient{
         
     }//End C:*
     
+    
     public ChildPatient(
             int id,
              String parent,
@@ -40,8 +41,7 @@ public class ChildPatient extends Patient{
              String family_doctor,
              String medicalProblem,
              ArrayList<WristBand> bandList,
-             WristBand basicBand,
-             LocalDate admitDate
+             WristBand basicBand
     ){
         super(
                 id,
@@ -50,8 +50,7 @@ public class ChildPatient extends Patient{
                 family_doctor, 
                 medicalProblem,
                 bandList, 
-                basicBand, 
-                admitDate
+                basicBand
         );
         this.parent = parent; 
         
