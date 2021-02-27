@@ -16,6 +16,8 @@ import OnlineAdmissionSystem.patients.ChildPatient;
 import OnlineAdmissionSystem.patients.AllergicChild;
 import OnlineAdmissionSystem.patients.AllergicMedicatedAdult;
 import OnlineAdmissionSystem.patients.AllergicMedicatedChild;
+import OnlineAdmissionSystem.patients.MedicatedAdult;
+import OnlineAdmissionSystem.patients.MedicatedChild;
 import OnlineAdmissionSystem.patients.Patient;
 import java.time.LocalDate;
 import java.time.Period;
@@ -121,21 +123,25 @@ public class ER_Admission {
                er.setPatient(new AllergicChild());
                if(form.isMedications()){
                 er.setPatient(new AllergicMedicatedChild());
-               }//End I:*
-           }//End I:*
-       }//End I:*
+               }//End I3:*
+           }//End I2:*
+           if(form.isMedications()){
+               er.setPatient(new MedicatedChild());
+           }//End I2:*
+       }//End I1:*
        else {
           er.setPatient(new AdultPatient());
           if(form.isAllergies()){
                er.setPatient(new AllergicAdult());
                if(form.isMedications()){
                 er.setPatient(new AllergicMedicatedAdult());
-               }//End I:*
-           }//End I:*
-       }//End I:*
-       
-       //D: Set Bands 
-        
+               }//End I3:*
+           }//End I2:*
+          if(form.isMedications()){
+              er.setPatient(new MedicatedAdult());
+          }//End I2:*
+       }//End I1:*
+    
     }//End M:*
     
     public boolean isAdult(LocalDate dob) {
