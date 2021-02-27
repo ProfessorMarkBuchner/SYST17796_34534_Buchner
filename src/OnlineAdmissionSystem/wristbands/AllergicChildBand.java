@@ -21,14 +21,8 @@ public class AllergicChildBand extends ChildBand{
     
     }
     
-    public AllergicChildBand(
-                             Long barcode,
-                             Patient patient
-                            ){
-        super(
-                barcode,
-                new AllergicChild()
-              );
+    public AllergicChildBand(Long barcode, AllergicChild patient){
+        super(barcode, patient);
     }//End C:*
     
     //Everything professor communicates is by way of analogy.
@@ -37,7 +31,6 @@ public class AllergicChildBand extends ChildBand{
     super.print();
         if(this.patient instanceof AllergicChild){
             AllergicChild converted = (AllergicChild)this.patient;
-            System.out.println(converted.getParent());
             for(int i = 0; i < converted.getAllergies().size(); i++){
                 System.out.println(converted.getAllergies().get(i));
             }//End F:*
