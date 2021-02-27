@@ -5,6 +5,8 @@
  */
 package OnlineAdmissionSystem.wristbands;
 
+import OnlineAdmissionSystem.patients.AllergicMedicatedChild;
+
 /**
  *
  * @author AllyCat13 Sheridan High 2021
@@ -12,9 +14,19 @@ package OnlineAdmissionSystem.wristbands;
 
 public class AllergicMedicatedChildBand extends AllergicChildBand{
 
-    public AllergicMedicatedChildBand() {
-        
+    public AllergicMedicatedChildBand(Long barcode, AllergicMedicatedChild patient) {
+        super(barcode, patient);
     }//End C:*
     
+    @Override 
+    public void print(){
+        super.print();
+        if(patient instanceof AllergicMedicatedChild){
+            AllergicMedicatedChild converted = (AllergicMedicatedChild)this.patient; 
+            for(int i = 0; i < converted.getMedications().size(); i++){
+                System.out.println(converted.getMedications().get(i));
+            }//End F:*
+        }//End I:*
+    }//End M:*
     
 }//End Class:_________________________
