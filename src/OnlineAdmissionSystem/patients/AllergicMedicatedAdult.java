@@ -27,27 +27,23 @@ public class AllergicMedicatedAdult extends AllergicAdult{
     }//End C:*
     
     public AllergicMedicatedAdult(
-             int id,
              String name,
              LocalDate dob,
              String family_doctor,
              String medicalProblem,
              ArrayList<WristBand> bandList,
              WristBand basicBand,
-             LocalDate admitDate,
              ArrayList<String> allergies,
              ArrayList<String> medications
             ){
     
         super(
-                id,
                 name, 
                 dob, 
                 family_doctor, 
                 medicalProblem,
                 bandList, 
                 basicBand, 
-                admitDate,
                 allergies
         );//End SU:*
         this.medications = medications; 
