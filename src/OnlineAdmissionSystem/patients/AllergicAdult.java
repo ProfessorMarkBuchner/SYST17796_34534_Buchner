@@ -28,7 +28,6 @@ public class AllergicAdult extends AdultPatient{
     }//End C:*
     
    public AllergicAdult(
-             int id,
              String name,
              LocalDate dob,
              String family_doctor,
@@ -38,7 +37,6 @@ public class AllergicAdult extends AdultPatient{
              ArrayList<String> allergies
            ){
        super(
-                id,
                 name, 
                 dob, 
                 family_doctor, 
