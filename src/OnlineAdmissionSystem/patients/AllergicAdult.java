@@ -35,7 +35,6 @@ public class AllergicAdult extends AdultPatient{
              String medicalProblem,
              ArrayList<WristBand> bandList,
              WristBand basicBand,
-             LocalDate admitDate,
              ArrayList<String> allergies
            ){
        super(
@@ -45,8 +44,7 @@ public class AllergicAdult extends AdultPatient{
                 family_doctor, 
                 medicalProblem,
                 bandList, 
-                basicBand, 
-                admitDate
+                basicBand
         );
        this.allergies = allergies;
    }//End C:*
