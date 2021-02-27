@@ -5,7 +5,6 @@
  */
 package OnlineAdmissionSystem.groups;
 
-import OnlineAdmissionSystem.groups.ResearchGroups;
 import OnlineAdmissionSystem.patients.Patient;
 import java.util.ArrayList;
 
