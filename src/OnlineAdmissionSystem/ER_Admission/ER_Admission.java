@@ -102,7 +102,19 @@ public class ER_Admission {
        /*
        Goes: above 18 | meds | allergies | research
        */
-       
+       /*
+       int id,
+             String parent,
+             String name,
+             LocalDate dob,
+             String family_doctor,
+             String medicalProblem,
+             ArrayList<WristBand> bandList,
+             WristBand basicBand,
+             LocalDate admitDate
+       */
+       //Breaking for the night. Tomorrow parse dob and ask for rest of stuff
+       //At right level.
        if(form.isAbove18()){
            er.setPatient(new ChildPatient());
            if(form.isAllergies()){
