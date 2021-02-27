@@ -24,7 +24,7 @@ public class AdultPatient extends Patient{
     
     public AdultPatient(
              String name,
-             LocalDate dob,
+             String dob,
              String family_doctor,
              String medicalProblem,
              ArrayList<WristBand> bandList,
@@ -43,7 +43,7 @@ public class AdultPatient extends Patient{
     
     public AdultPatient(
              String name,
-             LocalDate dob,
+             String dob,
              String family_doctor,
              String medicalProblem
     ){
