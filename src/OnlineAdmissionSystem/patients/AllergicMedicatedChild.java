@@ -27,7 +27,7 @@ public class AllergicMedicatedChild extends AllergicChild{
     public AllergicMedicatedChild(int id,
              String parent,
              String name,
-             LocalDate dob,
+             String dob,
              String family_doctor,
              String medicalProblem,
              ArrayList<WristBand> bandList,
