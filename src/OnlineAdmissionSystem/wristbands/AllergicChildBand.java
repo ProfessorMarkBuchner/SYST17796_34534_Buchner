@@ -6,7 +6,6 @@
 package OnlineAdmissionSystem.wristbands;
 
 import OnlineAdmissionSystem.patients.AllergicChild;
-import OnlineAdmissionSystem.patients.Patient;
 
 /**
  *
