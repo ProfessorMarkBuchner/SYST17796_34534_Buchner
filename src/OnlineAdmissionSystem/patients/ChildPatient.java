@@ -34,7 +34,6 @@ public class ChildPatient extends Patient{
     
     
     public ChildPatient(
-            int id,
              String parent,
              String name,
              LocalDate dob,
@@ -44,7 +43,6 @@ public class ChildPatient extends Patient{
              WristBand basicBand
     ){
         super(
-                id,
                 name, 
                 dob, 
                 family_doctor, 
