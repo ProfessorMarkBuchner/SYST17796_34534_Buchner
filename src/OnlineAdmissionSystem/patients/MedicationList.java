@@ -18,6 +18,7 @@ public class MedicationList {
     //Make a variable of Medications[] data type.
     private enum Medications{STIMULANT, DEPRESSANT, ANTIDEPRESSANT, ANTIPSYCHOTIC, ANTIVIRAL, INHIBTOR, BLOCKER}
 
+    //Use while loop with sentinal value for getting multiple values.
     private ArrayList<String> stimulantList;
     private ArrayList<String> depressantList;
     private ArrayList<String> antiDepressantList;
@@ -25,6 +26,14 @@ public class MedicationList {
     private ArrayList<String> antiviralList;
     private ArrayList<String> inhibitorList;
     private ArrayList<String> blockerList;
+    
+    private boolean onStimulant;
+    private boolean onDepressant;
+    private boolean onAntiDepressant;
+    private boolean onAntipsychotic;
+    private boolean onAntiviral;
+    private boolean onInhibitor;
+    private boolean onBlocker;
     
     
     public MedicationList() {
