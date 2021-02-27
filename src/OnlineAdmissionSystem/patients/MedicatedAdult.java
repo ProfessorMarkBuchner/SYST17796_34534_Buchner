@@ -28,7 +28,7 @@ public class MedicatedAdult extends AdultPatient{
     
     public MedicatedAdult(
              String name,
-             LocalDate dob,
+             String dob,
              String family_doctor,
              String medicalProblem,
              ArrayList<WristBand> bandList,
