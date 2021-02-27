@@ -29,11 +29,7 @@ public class AllergicMedicatedAdultBand extends AllergicAdultBand{
         super.print();
         if(this.patient instanceof AllergicMedicatedAdult){
             AllergicMedicatedAdult converted = (AllergicMedicatedAdult)this.patient;
-            //A:
-            for(int i = 0; i < converted.getAllergies().size(); i++){
-                System.out.println(converted.getAllergies().get(i));
-            }//End F*
-            //B: 
+            //A: 
             for(int i = 0; i < converted.getMedications().size(); i++){
                 System.out.println(converted.getMedications().get(i));
             }//End F*
