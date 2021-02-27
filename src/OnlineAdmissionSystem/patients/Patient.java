@@ -48,8 +48,7 @@ public abstract class Patient {
             String family_doctor,
             String medicalProblem,
             ArrayList<WristBand> bandList,
-            WristBand basicBand,
-            LocalDate admitDate
+            WristBand basicBand
                     ) {
         
         this.id = id;
@@ -58,7 +57,25 @@ public abstract class Patient {
         this.family_doctor = family_doctor;
         this.medicalProblem = medicalProblem;
         this.bandList = bandList;
-        this.admitDate = admitDate;
+        this.admitDate = LocalDate.now();
+        numberOfPatients += 1;
+        
+    }//End M:*
+    
+    public Patient(
+            int id,
+            String name,
+            LocalDate dob,
+            String family_doctor,
+            String medicalProblem
+                    ) {
+        
+        this.id = id;
+        this.name = name;
+        this.dob = dob;
+        this.family_doctor = family_doctor;
+        this.medicalProblem = medicalProblem;
+        this.admitDate = LocalDate.now();
         numberOfPatients += 1;
         
     }//End M:*
