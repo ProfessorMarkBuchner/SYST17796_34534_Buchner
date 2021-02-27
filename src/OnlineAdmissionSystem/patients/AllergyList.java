@@ -16,9 +16,16 @@ public class AllergyList {
     private enum allergies{DUST, FOOD, MEDICATIONS, PLANTS, ANIMALS}
     
     private ArrayList<String> dustAllergies;
+    private ArrayList<String> foodAllergies;
     private ArrayList<String> medicationAllergies;
     private ArrayList<String> plantAllergies;
     private ArrayList<String> animalAllergies;
+    
+    private boolean allergicDust;
+    private boolean allergicFood;
+    private boolean allergicMedication;
+    private boolean allergicPlants;
+    private boolean allergicAnimals;
     
     public AllergyList() {
         this.dustAllergies = new ArrayList<>();
@@ -71,6 +78,8 @@ public class AllergyList {
     public void setAnimalAllergies(ArrayList<String> animalAllergies) {
         this.animalAllergies = animalAllergies;
     }
+    
+    
       
    
 }//End Class:*
