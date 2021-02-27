@@ -29,8 +29,7 @@ public class AdultPatient extends Patient{
              String family_doctor,
              String medicalProblem,
              ArrayList<WristBand> bandList,
-             WristBand basicBand,
-             LocalDate admitDate
+             WristBand basicBand
     ){
         super(
                 id,
@@ -39,8 +38,7 @@ public class AdultPatient extends Patient{
                 family_doctor, 
                 medicalProblem,
                 bandList, 
-                basicBand, 
-                admitDate
+                basicBand
         );
         
     }//End C:*
