@@ -27,7 +27,6 @@ public class MedicatedAdult extends AdultPatient{
 
     
     public MedicatedAdult(
-             int id,
              String name,
              LocalDate dob,
              String family_doctor,
@@ -37,7 +36,6 @@ public class MedicatedAdult extends AdultPatient{
              ArrayList<String> medications
              ){
         super(
-                id,
                 name, 
                 dob, 
                 family_doctor, 
