@@ -9,7 +9,7 @@ import OnlineAdmissionSystem.patients.Patient;
 
 /**
  *
- * @author AllyCat @ Sheridan College 2021
+ * @author AllyCat @ Sheridan High 2021
  */
 public abstract class WristBand {
     
@@ -30,9 +30,21 @@ public abstract class WristBand {
                      Patient patient
                     ){
      this.barcode = barcode; 
+     this.patient = patient;
     }//End C:*
     
     //Getters:_________________________________________
+
+    public Patient getPatient() {
+        return patient;
+    }//End M:*
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }//End M:*
+    
+    
+    
     
     public Long getBarcode(){
         return barcode;
