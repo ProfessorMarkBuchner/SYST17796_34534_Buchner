@@ -34,7 +34,6 @@ public class MedicatedAdult extends AdultPatient{
              String medicalProblem,
              ArrayList<WristBand> bandList,
              WristBand basicBand,
-             LocalDate admitDate,
              ArrayList<String> medications
              ){
         super(
@@ -44,8 +43,7 @@ public class MedicatedAdult extends AdultPatient{
                 family_doctor, 
                 medicalProblem,
                 bandList, 
-                basicBand, 
-                admitDate
+                basicBand
         );
         this.medications = medications; 
         
