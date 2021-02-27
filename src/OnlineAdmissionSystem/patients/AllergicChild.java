@@ -30,7 +30,6 @@ public class AllergicChild extends ChildPatient{
     
     
     public AllergicChild(
-             int id,
              String parent,
              String name,
              LocalDate dob,
@@ -41,7 +40,6 @@ public class AllergicChild extends ChildPatient{
              ArrayList<String> allergies
             ){
         super(
-                id,
                 parent,
                 name, 
                 dob, 
