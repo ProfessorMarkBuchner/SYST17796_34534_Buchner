@@ -43,7 +43,7 @@ public abstract class Patient {
 
     public Patient(
             String name,
-            LocalDate dob,
+            String dob,
             String family_doctor,
             String medicalProblem,
             ArrayList<WristBand> bandList,
@@ -52,10 +52,11 @@ public abstract class Patient {
         
         this.id = Patient.numberOfPatients;
         this.name = name;
-        this.dob = dob;
+        this.dob = LocalDate.parse(dob);
         this.family_doctor = family_doctor;
         this.medicalProblem = medicalProblem;
         this.bandList = bandList;
+        this.basicBand = basicBand;
         this.admitDate = LocalDate.now();
         numberOfPatients += 1;
         
@@ -63,14 +64,14 @@ public abstract class Patient {
     
     public Patient(
             String name,
-            LocalDate dob,
+            String dob,
             String family_doctor,
             String medicalProblem
                     ) {
         
         this.id = Patient.numberOfPatients;
         this.name = name;
-        this.dob = dob;
+        this.dob = LocalDate.parse(dob);
         this.family_doctor = family_doctor;
         this.medicalProblem = medicalProblem;
         this.admitDate = LocalDate.now();
