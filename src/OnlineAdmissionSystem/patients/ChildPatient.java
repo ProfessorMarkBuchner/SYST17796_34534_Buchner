@@ -8,7 +8,6 @@ package OnlineAdmissionSystem.patients;
 //Imports:_________________________
 
 import OnlineAdmissionSystem.wristbands.WristBand;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -36,7 +35,7 @@ public class ChildPatient extends Patient{
     public ChildPatient(
              String parent,
              String name,
-             LocalDate dob,
+             String dob,
              String family_doctor,
              String medicalProblem,
              ArrayList<WristBand> bandList,
@@ -49,6 +48,23 @@ public class ChildPatient extends Patient{
                 medicalProblem,
                 bandList, 
                 basicBand
+        );
+        this.parent = parent; 
+        
+    }//End C:*
+    
+    public ChildPatient(
+             String parent,
+             String name,
+             String dob,
+             String family_doctor,
+             String medicalProblem
+    ){
+        super(
+                name, 
+                dob, 
+                family_doctor, 
+                medicalProblem
         );
         this.parent = parent; 
         
