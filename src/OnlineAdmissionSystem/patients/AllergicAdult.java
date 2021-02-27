@@ -9,7 +9,6 @@ package OnlineAdmissionSystem.patients;
 
 
 import OnlineAdmissionSystem.wristbands.WristBand;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -29,7 +28,7 @@ public class AllergicAdult extends AdultPatient{
     
    public AllergicAdult(
              String name,
-             LocalDate dob,
+             String dob,
              String family_doctor,
              String medicalProblem,
              ArrayList<WristBand> bandList,
