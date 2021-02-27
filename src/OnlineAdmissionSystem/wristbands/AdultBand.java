@@ -8,7 +8,6 @@ package OnlineAdmissionSystem.wristbands;
 //Imports:________________________________
 
 import OnlineAdmissionSystem.patients.AdultPatient;
-import OnlineAdmissionSystem.patients.Patient;
 
 /**
  *
