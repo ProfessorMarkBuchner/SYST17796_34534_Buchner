@@ -6,7 +6,6 @@
 package OnlineAdmissionSystem.patients;
 
 import OnlineAdmissionSystem.wristbands.WristBand;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -24,7 +23,7 @@ public class AllergicMedicatedChild extends AllergicChild{
     }//End C:*
     
     
-    public AllergicMedicatedChild(int id,
+    public AllergicMedicatedChild(
              String parent,
              String name,
              String dob,
@@ -42,6 +41,26 @@ public class AllergicMedicatedChild extends AllergicChild{
                 medicalProblem,
                 bandList, 
                 basicBand, 
+                allergies
+        );//End SU:*
+    this.medications = medications;
+    }//End C:*
+    
+    public AllergicMedicatedChild(
+             String parent,
+             String name,
+             String dob,
+             String family_doctor,
+             String medicalProblem,
+             ArrayList<String> allergies,
+             ArrayList<String> medications
+    ){
+        super(
+                parent,
+                name, 
+                dob, 
+                family_doctor, 
+                medicalProblem,
                 allergies
         );//End SU:*
     this.medications = medications;
