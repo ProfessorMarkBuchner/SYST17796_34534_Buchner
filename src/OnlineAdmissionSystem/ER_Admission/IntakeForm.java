@@ -6,7 +6,6 @@
 package OnlineAdmissionSystem.ER_Admission;
 
 import OnlineAdmissionSystem.input.UserInput;
-import java.util.Scanner;
 
 /**
  *
@@ -86,28 +85,28 @@ public class IntakeForm {
         
         //A: Q1
         System.out.println("Are you above 18?");
-        String q1 =  input.promptStringUser(new Scanner(System.in));
+        String q1 =  input.promptStringUser();
         if(q1.equals("yes")){
             this.setAbove18(true);
         }//End I:*
     
         //B: Q2
         System.out.println("Do you take any prescription medications?");
-        String q2 =  input.promptStringUser(new Scanner(System.in));
+        String q2 =  input.promptStringUser();
         if(q2.equals("yes")){
             this.setMedications(true);
         }//End I:*
         
         //C: Q3
         System.out.println("Are you allergic to any medications or any allergies in general?");
-        String q3 =  input.promptStringUser(new Scanner(System.in));
+        String q3 =  input.promptStringUser();
         if(q3.equals("yes")){
             this.setAllergies(true);
         }//End I:*
         
         //D: Q4
         System.out.println("Are you willing to participate in any research groups?");
-        String q4 =  input.promptStringUser(new Scanner(System.in));
+        String q4 =  input.promptStringUser();
         if(q4.equals("yes")){
             this.setResearchSubject(true);
         }//End I:*
