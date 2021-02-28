@@ -17,8 +17,8 @@ public class MedicationChildBand extends WristBand {
 
     }//End C:*
 
-    public MedicationChildBand(Long barcode, MedicatedChild patient) {
-        super(barcode, patient);
+    public MedicationChildBand(MedicatedChild patient) {
+        super(patient);
     }//End C:*
 
     @Override
