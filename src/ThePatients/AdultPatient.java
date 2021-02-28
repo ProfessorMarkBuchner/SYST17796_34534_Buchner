@@ -45,6 +45,7 @@ public class AdultPatient extends Patient{
              String dob,
              String family_doctor,
              String medicalProblem
+         
     ){
         super(
                 name, 
