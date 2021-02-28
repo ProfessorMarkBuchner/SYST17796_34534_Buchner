@@ -6,7 +6,6 @@
 package OnlineAdmissionSystem.patients;
 
 import OnlineAdmissionSystem.wristbands.WristBand;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -42,6 +41,23 @@ public class MedicatedAdult extends AdultPatient{
                 medicalProblem,
                 bandList, 
                 basicBand
+        );
+        this.medications = medications; 
+        
+    }//End C:*
+    
+    public MedicatedAdult(
+             String name,
+             String dob,
+             String family_doctor,
+             String medicalProblem,
+             ArrayList<String> medications
+             ){
+        super(
+                name, 
+                dob, 
+                family_doctor, 
+                medicalProblem
         );
         this.medications = medications; 
         
