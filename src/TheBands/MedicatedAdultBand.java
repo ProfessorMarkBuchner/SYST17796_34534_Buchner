@@ -5,9 +5,7 @@
  */
 package TheBands;
 
-import TheBands.AdultBand;
 import ThePatients.MedicatedAdult;
-import ThePatients.Patient;
 
 /**
  *
@@ -19,8 +17,8 @@ public class MedicatedAdultBand extends AdultBand{
         
     }//End C:*
     
-    public MedicatedAdultBand(Long barcode, Patient patient) {
-        super(barcode, new MedicatedAdult());
+    public MedicatedAdultBand(MedicatedAdult patient) {
+        super(patient);
     }//End C:*
     
     //Methods:________________________
