@@ -21,7 +21,7 @@ public class AllergicChildBand extends ChildBand{
     }
     
     public AllergicChildBand(Long barcode, AllergicChild patient){
-        super(barcode, patient);
+        super(patient);
     }//End C:*
     
     //Everything professor communicates is by way of analogy.
