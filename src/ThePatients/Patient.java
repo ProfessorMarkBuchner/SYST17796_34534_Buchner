@@ -18,6 +18,9 @@ import java.util.ArrayList;
  *
  * @author AllyCat was here @ Sheridan College 2021
  */
+
+//TODO: automatically create and assignm wrist band to patient in constructor.
+
 //Class to model patients in an ER Admission System
 public abstract class Patient {
 
