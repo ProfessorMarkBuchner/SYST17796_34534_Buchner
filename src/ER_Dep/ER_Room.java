@@ -103,6 +103,7 @@ public class ER_Room {
         //Breaking for the night. Tomorrow parse dob and ask for rest of stuff
         //At right level.
         if (form.isAbove18()) {
+            System.out.println("ChildPatient: Enter name, dob, family doctor, medical problem, and parent name");
             er.setPatient(new ChildPatient(/* name | dob | family doctor | medical problem | parent   */
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser(),
@@ -111,7 +112,7 @@ public class ER_Room {
                     er.getInput().promptStringUser())
             );
             if (form.isAllergies()) {
-
+                System.out.println("AllergicChild: Enter name, dob, family doctor, medical problem, parent name, and allergies");
                 /* name | dob | family doctor | medical problem | parent  | allergies */
                 er.setPatient(new AllergicChild(
                         er.getInput().promptStringUser(),
@@ -121,6 +122,7 @@ public class ER_Room {
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringSentinel()));
                 if (form.isMedications()) {
+                    System.out.println("AllergicMedicatedChild: Enter name, dob, family doctor, medical problem, parent name, allergies, and medications");
                     er.setPatient(new AllergicMedicatedChild(er.getInput().promptStringUser(),
                             er.getInput().promptStringUser(),
                             er.getInput().promptStringUser(),
@@ -131,6 +133,7 @@ public class ER_Room {
                 }//End I3:*
             }//End I2:*
             if (form.isMedications()) {
+                System.out.println("MedicatedChild: Enter name, dob, family doctor, medical problem, parent name, and medications");
                 er.setPatient(new MedicatedChild(
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
@@ -141,6 +144,7 @@ public class ER_Room {
             }//End I2:*
         }//End I1:*
         else {
+            System.out.println("AdultPatient: Enter name, dob, family doctor, and medical problem");
             er.setPatient(new AdultPatient(/* name | dob | family doctor | medical problem   */
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser(),
@@ -149,6 +153,7 @@ public class ER_Room {
             );
             if (form.isAllergies()) {
                 /* name | dob | family doctor | medical problem  | allergies */
+                System.out.println("AllergicAdult: Enter name, dob, family doctor, medical problem, and allergies");
                 er.setPatient(new AllergicAdult(
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
@@ -156,6 +161,8 @@ public class ER_Room {
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringSentinel()));
                 if (form.isMedications()) {
+                    /* name | dob | family doctor | medical problem  | allergies | medications  */
+                    System.out.println("AllergicMedicatedAdult: Enter name, dob, family doctor, medical problem, allergies, and medications");
                     er.setPatient(new AllergicMedicatedAdult(er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
@@ -166,6 +173,8 @@ public class ER_Room {
                 }//End I3:*
             }//End I2:*
             if (form.isMedications()) {
+                /* name | dob | family doctor | medical problem  | medications */
+                System.out.println("MedicatedAdult: Enter name, dob, family doctor, medical problem, and medications");
                 er.setPatient(new MedicatedAdult(er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
