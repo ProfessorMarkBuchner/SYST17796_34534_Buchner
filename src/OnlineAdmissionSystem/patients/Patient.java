@@ -25,6 +25,7 @@ public abstract class Patient {
     
     protected int id;
     protected String name;
+    //Year-Month-Day
     protected LocalDate dob;
     protected String family_doctor;
     private String medicalProblem;
