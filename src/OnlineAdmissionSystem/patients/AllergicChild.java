@@ -24,7 +24,7 @@ public class AllergicChild extends ChildPatient{
     //Constructors:________________________________
     
     public AllergicChild() {
-        
+        this.allergies = new ArrayList<>();
     }//End C:*
     
     
@@ -46,6 +46,24 @@ public class AllergicChild extends ChildPatient{
                 medicalProblem,
                 bandList, 
                 basicBand
+        );
+        this.allergies = allergies; 
+    }//End C:*
+    
+    public AllergicChild(
+             String parent,
+             String name,
+             String dob,
+             String family_doctor,
+             String medicalProblem,
+             ArrayList<String> allergies
+            ){
+        super(
+                parent,
+                name, 
+                dob, 
+                family_doctor, 
+                medicalProblem
         );
         this.allergies = allergies; 
     }//End C:*
