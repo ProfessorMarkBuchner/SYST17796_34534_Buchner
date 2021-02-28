@@ -48,6 +48,25 @@ public class AllergicMedicatedAdult extends AllergicAdult{
         this.medications = medications; 
     }//End C:*
     
+    public AllergicMedicatedAdult(
+             String name,
+             String dob,
+             String family_doctor,
+             String medicalProblem,
+             ArrayList<String> allergies,
+             ArrayList<String> medications
+            ){
+    
+        super(
+                name, 
+                dob, 
+                family_doctor, 
+                medicalProblem,
+                allergies
+        );//End SU:*
+        this.medications = medications; 
+    }//End C:*
+    
     //Getters & Setters:__________________________________________
 
     public ArrayList<String> getMedications() {
