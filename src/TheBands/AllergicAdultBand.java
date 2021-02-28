@@ -5,9 +5,7 @@
  */
 package TheBands;
 
-import TheBands.AdultBand;
 import ThePatients.AllergicAdult;
-import ThePatients.Patient;
 
 /**
  *
@@ -20,8 +18,8 @@ public class AllergicAdultBand extends AdultBand{
         
     }//End C:*
     
-    public AllergicAdultBand(Long barcode, Patient patient) {
-        super(barcode, new AllergicAdult());
+    public AllergicAdultBand(Long barcode, AllergicAdult patient) {
+        super(patient);
     }//End C:*
     
     @Override
