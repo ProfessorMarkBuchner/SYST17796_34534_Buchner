@@ -17,14 +17,8 @@ public class ChildBand extends WristBand{
     
     }//End C:*
     
-    public ChildBand(
-                              Long barcode,
-                              ChildPatient patient
-                              ){
-        super(
-              barcode, 
-              patient
-              );
+    public ChildBand(ChildPatient patient){
+        super(patient);
     
     }//End C:*
     
