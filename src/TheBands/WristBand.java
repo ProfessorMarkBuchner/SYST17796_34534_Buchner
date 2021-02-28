@@ -11,11 +11,11 @@ import ThePatients.Patient;
  *
  * @author AllyCat @ Sheridan High 2021
  */
-public abstract class WristBand {
+public class WristBand {
     
     //Fields:_______________________________________
     
-    protected Long barcode; 
+    protected int barcode; 
     protected Patient patient;
     
     //Constructors:__________________________________
@@ -25,11 +25,8 @@ public abstract class WristBand {
     
     }//End C:*
     
-    public WristBand(
-                     Long barcode,
-                     Patient patient
-                    ){
-     this.barcode = barcode; 
+    public WristBand(Patient patient){
+     this.barcode = patient.getId(); 
      this.patient = patient;
     }//End C:*
     
@@ -42,21 +39,14 @@ public abstract class WristBand {
     public void setPatient(Patient patient) {
         this.patient = patient;
     }//End M:*
-    
-    
-    
-    
-    public Long getBarcode(){
+   
+    public int getBarcode(){
         return barcode;
     }//End G:*
     
     //Setters:_______________________________
     
-    public void setBarcode(Long newB){
-        this.barcode = newB; 
-    }//End S:*
-    
-    
+  
     //Methods:________________________________
     
     public void print(){
