@@ -17,21 +17,18 @@ public class UserInput {
     
 	//Fields:___________________________________________
 
+    private final Scanner input;
 
 	//Constructors:_____________________________________
 
 	public UserInput() {
 		// TODO Auto-generated constructor stub
+                this.input = new Scanner(System.in);
 	}//End C:*
-
-
-	public UserInput(UserInput input) {
-		// TODO Auto-generated constructor stub
-	
-	}//End C:*
-
+        
+        
 	//When a number with a decimal is desirable
-	public double promptDoubleUser(Scanner input){
+	public double promptDoubleUser(){
 		boolean continueInput = true;
 		double userNum = 0.0;
 
@@ -56,7 +53,29 @@ public class UserInput {
 
 
 	//For word use cases
-	public String promptStringUser(Scanner input){
+	public String promptStringUser(){
+		boolean continueInput = true;
+		String userStr = " ";
+
+		do{
+			try{
+
+				System.out.println("Enter a word please");
+				userStr = input.next();
+				continueInput = false;
+			}
+			catch (InputMismatchException ex){
+				System.out.println("Not a sequence of letters!");
+				input.nextLine();
+			}//End C:*
+
+		}//End D:*
+		while(continueInput);
+
+		return userStr;
+	}//End M:*
+        
+        public String promptStringSentinel(){
 		boolean continueInput = true;
 		String userStr = " ";
 
@@ -80,7 +99,7 @@ public class UserInput {
 
 
 	//When looking for whole numbers
-	public int promptIntUser(Scanner input){
+	public int promptIntUser(){
 		boolean continueInput = true;
 		int userNum = 0;
 
@@ -113,7 +132,7 @@ public class UserInput {
 			//Repeat
 			while(flag){
 				//Ask
-				int uInput = this.promptIntUser(new Scanner(System.in));
+				int uInput = this.promptIntUser();
 				//Check
 				if(uInput > 0){
 					result = uInput;
@@ -134,7 +153,7 @@ public class UserInput {
 		//Repeat
 		while(flag){
 			//Ask
-			double uInput = this.promptDoubleUser(new Scanner(System.in));
+			double uInput = this.promptDoubleUser();
 			//Check
 			if(uInput > 0){
 				result = uInput;
@@ -155,7 +174,7 @@ public class UserInput {
 		//Repeat
 		while(flag){
 			//Ask
-			int ask = this.promptIntUser(new Scanner(System.in));
+			int ask = this.promptIntUser();
 			//Check
 			if(ask >=1 && ask <= 2){
 				uChoice = ask;
