@@ -45,6 +45,24 @@ public class MedicatedChild extends ChildPatient{
     
     }//End C:*
     
+    public MedicatedChild(
+             String parent,
+             String name,
+             String dob,
+             String family_doctor,
+             String medicalProblem,
+             ArrayList<String> medications
+            ){
+        super(
+                name, 
+                parent,
+                dob, 
+                family_doctor, 
+                medicalProblem
+        );
+        this.medications = medications; 
+    
+    }//End C:*
     //Getters & Setters:__________________________
 
     public ArrayList<String> getMedications() {
