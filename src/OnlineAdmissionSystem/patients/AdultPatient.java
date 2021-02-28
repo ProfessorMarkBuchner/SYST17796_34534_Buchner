@@ -8,7 +8,6 @@ package OnlineAdmissionSystem.patients;
 //Imports:_________________________
 
 import OnlineAdmissionSystem.wristbands.WristBand;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
