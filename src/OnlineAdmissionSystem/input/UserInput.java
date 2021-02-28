@@ -5,6 +5,7 @@
  */
 package OnlineAdmissionSystem.input;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -18,12 +19,14 @@ public class UserInput {
 	//Fields:___________________________________________
 
     private final Scanner input;
+    private ArrayList<String> inputList; 
 
 	//Constructors:_____________________________________
 
 	public UserInput() {
 		// TODO Auto-generated constructor stub
                 this.input = new Scanner(System.in);
+                this.inputList = new ArrayList<>();
 	}//End C:*
         
         
@@ -46,8 +49,6 @@ public class UserInput {
 
 		}
 		while(continueInput);
-
-
 		return userNum;
 	}//End M:*
 
@@ -62,6 +63,7 @@ public class UserInput {
 
 				System.out.println("Enter a word please");
 				userStr = input.next();
+                                userStr = userStr.toLowerCase();
 				continueInput = false;
 			}
 			catch (InputMismatchException ex){
@@ -75,17 +77,22 @@ public class UserInput {
 		return userStr;
 	}//End M:*
         
-        public String promptStringSentinel(){
+        public ArrayList<String> promptStringSentinel(){
 		boolean continueInput = true;
-		String userStr = " ";
+		String userStr;
 
 		do{
 			try{
-
-				System.out.println("Enter a word please");
+                                
+				System.out.println("Enter multiple words please. Type end to finish");
 				userStr = input.next();
-				continueInput = false;
-			}
+                                userStr = userStr.toLowerCase();
+                                if(userStr.equals("end")){
+                                    continueInput = false;
+                                }//End I:*
+                                inputList.add(userStr);
+				
+			}//End TRY:*
 			catch (InputMismatchException ex){
 				System.out.println("Not a sequence of letters!");
 				input.nextLine();
@@ -94,7 +101,7 @@ public class UserInput {
 		}//End D:*
 		while(continueInput);
 
-		return userStr;
+		return inputList;
 	}//End M:*
 
 
@@ -113,12 +120,10 @@ public class UserInput {
 			catch (InputMismatchException ex){
 				System.out.println("Not a Integer!");
 				input.nextLine();
-			}
+			}//End CAT:*
 
-		}
+		}//End D:*
 		while(continueInput);
-
-
 		return userNum;
 
 	}//End M:*
@@ -143,8 +148,7 @@ public class UserInput {
 			return result;
 		}//End M:*
 
-
-
+                
 	//When the decimal number needs to be non-negative 
 	public double getWholeDubs(){
 		//Setup
