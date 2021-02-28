@@ -20,8 +20,6 @@ import OnlineAdmissionSystem.patients.Patient;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Scanner;
 
 /**
  *
@@ -41,9 +39,6 @@ public class ER_Admission {
     private Patient patient;
     private WristBand wristBand;
     private LocalDate dob;
-    private boolean continueLoop;
-    Scanner uInput = new Scanner(System.in);
-    ArrayList<String> uAllergies = new ArrayList<>();
 
     //Getters & Setters:____________________________
     public LocalDate getDob() {
@@ -64,7 +59,7 @@ public class ER_Admission {
 
     //Constructors:_____________________________________
     public ER_Admission() {
-        input = new UserInput();
+        this.input = new UserInput();
     }//End C:*
 
     //Getters & Setters:________________________________________
@@ -87,7 +82,6 @@ public class ER_Admission {
         //A: Create 
         ER_Admission er = new ER_Admission();
         IntakeForm form = new IntakeForm();
-        
 
         //B: Gather 
         form.askForItAll();
@@ -118,46 +112,33 @@ public class ER_Admission {
                     er.getInput().promptStringUser())
             );
             if (form.isAllergies()) {
-                er.continueLoop = true;
-                
-                ArrayList<String> uAllergies = new ArrayList<>();
-                while (er.continueLoop) {
-                    System.out.println("Please enter something your alergic to. When done type end");
-                    uAllergies.add(er.uInput.next());
-                    if (er.uInput.next().equals("end")) {
-                        er.continueLoop = false;
-                    }//End I:*
-                }//End W:*
-                /* name | dob | family doctor | medical problem | parent  | medications */
-                er.continueLoop = true;
-                while (er.continueLoop) {
-                    try{
-                        System.out.println("Please enter something your alergic to. When done type end");
-                    if (er.uInput.next().equals("end")) {
-                        er.continueLoop = false;
-                    }//End I:*
-                    else{
-                    er.uAllergies.add(er.uInput.next());
-                    }//End E:*
-                    
-                    }//End TRY:*
-                    catch(InputMismatchException ex){
-                        System.out.println("Pardon me, but that's not a string");
-                    }//End CAT:*          
-                }//End W:*
+
+                /* name | dob | family doctor | medical problem | parent  | allergies */
                 er.setPatient(new AllergicChild(
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
-                        uAllergies));
+                        er.getInput().promptStringSentinel()));
                 if (form.isMedications()) {
-                    er.setPatient(new AllergicMedicatedChild());
+                    er.setPatient(new AllergicMedicatedChild(er.getInput().promptStringUser(),
+                            er.getInput().promptStringUser(),
+                            er.getInput().promptStringUser(),
+                            er.getInput().promptStringUser(),
+                            er.getInput().promptStringUser(),
+                            er.getInput().promptStringSentinel(),
+                            er.getInput().promptStringSentinel()));
                 }//End I3:*
             }//End I2:*
             if (form.isMedications()) {
-                er.setPatient(new MedicatedChild());
+                er.setPatient(new MedicatedChild(
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringSentinel()));
             }//End I2:*
         }//End I1:*
         else {
@@ -169,13 +150,28 @@ public class ER_Admission {
             );
             if (form.isAllergies()) {
                 /* name | dob | family doctor | medical problem  | allergies */
-                er.setPatient(new AllergicAdult());
+                er.setPatient(new AllergicAdult(
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringSentinel()));
                 if (form.isMedications()) {
-                    er.setPatient(new AllergicMedicatedAdult());
+                    er.setPatient(new AllergicMedicatedAdult(er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringSentinel(),
+                        er.getInput().promptStringSentinel()
+                        ));
                 }//End I3:*
             }//End I2:*
             if (form.isMedications()) {
-                er.setPatient(new MedicatedAdult());
+                er.setPatient(new MedicatedAdult(er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringUser(),
+                        er.getInput().promptStringSentinel()));
             }//End I2:*
         }//End I1:*
 
