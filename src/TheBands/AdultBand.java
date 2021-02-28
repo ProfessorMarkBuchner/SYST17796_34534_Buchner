@@ -20,10 +20,9 @@ public class AdultBand extends WristBand{
     }//End C:*
     
     public AdultBand(
-                     Long barcode,
                      AdultPatient patient
                     ) {
-        super(barcode, patient);   
+        super(patient);   
     }//End C:*
     
     
