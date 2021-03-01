@@ -5,7 +5,6 @@
  */
 package TheBands;
 
-import TheBands.AllergicChildBand;
 import ThePatients.AllergicMedicatedChild;
 
 /**
@@ -15,8 +14,8 @@ import ThePatients.AllergicMedicatedChild;
 
 public class AllergicMedicatedChildBand extends AllergicChildBand{
 
-    public AllergicMedicatedChildBand(Long barcode, AllergicMedicatedChild patient) {
-        super(barcode, patient);
+    public AllergicMedicatedChildBand(AllergicMedicatedChild patient) {
+        super(patient);
     }//End C:*
     
     @Override 
