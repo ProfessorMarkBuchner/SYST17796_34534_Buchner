@@ -8,6 +8,12 @@ package ER_Dep;
 //Imports:_____________________________________
 import TheBands.AdultBand;
 import TheBands.AllergicAdultBand;
+import TheBands.AllergicChildBand;
+import TheBands.AllergicMedicatedAdultBand;
+import TheBands.AllergicMedicatedChildBand;
+import TheBands.ChildBand;
+import TheBands.MedicatedAdultBand;
+import TheBands.MedicationChildBand;
 import UserInput.UserInput;
 import TheBands.WristBand;
 import ThePatients.AdultPatient;
@@ -130,6 +136,9 @@ public class ER_Room {
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringSentinel()));
+            MedicatedAdult converted = (MedicatedAdult)er.getPatient();
+            converted.setBasicBand(new MedicatedAdultBand(converted));
+            er.setPatient(converted);
         }//End I:*
         
         if(form.isAbove18() && form.isAllergies() & form.isMedications()){
@@ -142,6 +151,9 @@ public class ER_Room {
                         er.getInput().promptStringSentinel(),
                         er.getInput().promptStringSentinel()
                         ));
+            AllergicMedicatedAdult converted = (AllergicMedicatedAdult)er.getPatient();
+            converted.setBasicBand(new AllergicMedicatedAdultBand(converted));
+            er.setPatient(converted);
         }//End I:*
         
     
@@ -156,6 +168,9 @@ public class ER_Room {
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser()));
+            ChildPatient converted = (ChildPatient)er.getPatient();
+            converted.setBasicBand(new ChildBand(converted));
+            er.setPatient(converted);
         }//End I:*
         
  
@@ -169,6 +184,9 @@ public class ER_Room {
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringSentinel()));
+            AllergicChild converted = (AllergicChild)er.getPatient();
+            converted.setBasicBand(new AllergicChildBand(converted));
+            er.setPatient(converted);
       }//End I:*
       
       if(!form.isAbove18() && !form.isAllergies() & form.isMedications()){
@@ -180,6 +198,9 @@ public class ER_Room {
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringSentinel()));
+            MedicatedChild converted = (MedicatedChild)er.getPatient();
+            converted.setBasicBand(new MedicationChildBand(converted));
+            er.setPatient(converted);
       }//End I:*
       
       if(!form.isAbove18() && form.isAllergies() & form.isMedications()){
@@ -191,6 +212,9 @@ public class ER_Room {
                             er.getInput().promptStringUser(),
                             er.getInput().promptStringSentinel(),
                             er.getInput().promptStringSentinel()));
+            AllergicMedicatedChild converted = (AllergicMedicatedChild)er.getPatient();
+            converted.setBasicBand(new AllergicMedicatedChildBand(converted));
+            er.setPatient(converted);
         }//End I:*
       
     }//End Main:*
