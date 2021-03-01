@@ -18,7 +18,7 @@ public class AllergicAdultBand extends AdultBand{
         
     }//End C:*
     
-    public AllergicAdultBand(Long barcode, AllergicAdult patient) {
+    public AllergicAdultBand(AllergicAdult patient) {
         super(patient);
     }//End C:*
     
