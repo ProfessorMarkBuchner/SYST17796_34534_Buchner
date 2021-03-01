@@ -20,7 +20,7 @@ public class AllergicChildBand extends ChildBand{
     
     }
     
-    public AllergicChildBand(Long barcode, AllergicChild patient){
+    public AllergicChildBand(AllergicChild patient){
         super(patient);
     }//End C:*
     
