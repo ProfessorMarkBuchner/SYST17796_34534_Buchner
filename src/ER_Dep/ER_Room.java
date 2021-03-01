@@ -42,26 +42,9 @@ public class ER_Room {
     //Fields:__________________________________________
     //This var is just for usage and doesn't change 
     private final UserInput input;
-    private Patient patient;
-    private WristBand wristBand;
-    private LocalDate dob;
 
     //Getters & Setters:____________________________
-    public LocalDate getDob() {
-        return dob;
-    }
-
-    public void setDob(LocalDate dob) {
-        this.dob = dob;
-    }
-
-    public WristBand getWristBand() {
-        return wristBand;
-    }
-
-    public void setWristBand(WristBand wristBand) {
-        this.wristBand = wristBand;
-    }
+   
 
     //Constructors:_____________________________________
     public ER_Room() {
@@ -73,13 +56,6 @@ public class ER_Room {
         return input;
     }
 
-    public Patient getPatient() {
-        return patient;
-    }
-
-    public void setPatient(Patient patient) {
-        this.patient = patient;
-    }
 
     //Methods:________________________________________________
     //Program Starter 
@@ -102,58 +78,61 @@ public class ER_Room {
         if(form.isAbove18() && !form.isAllergies() & !form.isMedications()){
             System.out.println("AdultPatient: Enter name, dob, family doctor, and medical problem");
             /* name | dob | family doctor | medical problem   */
-            er.setPatient(new AdultPatient(
+             AdultPatient ap = new AdultPatient(
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser(),
-                    er.getInput().promptStringUser()));
+                    er.getInput().promptStringUser());
             //Assign wrist band
-            AdultPatient converted = (AdultPatient)er.getPatient();
-            converted.setBasicBand(new AdultBand(converted));
-            er.setPatient(converted);
+            
+            ap.setBasicBand(new AdultBand(ap));
+            ap.getBasicBand().print();
+            
         }//End I:*
         
         if(form.isAbove18() && form.isAllergies() & !form.isMedications()){
             /* name | dob | family doctor | medical problem  | allergies */
                 System.out.println("AllergicAdult: Enter name, dob, family doctor, medical problem, and allergies");
-                er.setPatient(new AllergicAdult(
+                    AllergicAdult aa = new AllergicAdult(
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
-                        er.getInput().promptStringSentinel()));
+                        er.getInput().promptStringSentinel());
                 //Assign Band
-            AllergicAdult converted = (AllergicAdult)er.getPatient();
-            converted.setBasicBand(new AllergicAdultBand(converted));
-            er.setPatient(converted);
+
+            aa.setBasicBand(new AllergicAdultBand(aa));
+            aa.getBasicBand().print();
+           
+           
         }//End I:*
         
         if(form.isAbove18() && !form.isAllergies() & form.isMedications()){
             /* name | dob | family doctor | medical problem  | medications */
                 System.out.println("MedicatedAdult: Enter name, dob, family doctor, medical problem, and medications");
-                er.setPatient(new MedicatedAdult(er.getInput().promptStringUser(),
+                MedicatedAdult ma = new MedicatedAdult(er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
-                        er.getInput().promptStringSentinel()));
-            MedicatedAdult converted = (MedicatedAdult)er.getPatient();
-            converted.setBasicBand(new MedicatedAdultBand(converted));
-            er.setPatient(converted);
+                        er.getInput().promptStringSentinel());
+            ma.setBasicBand(new MedicatedAdultBand(ma));
+            ma.getBasicBand().print();
+          
         }//End I:*
         
         if(form.isAbove18() && form.isAllergies() & form.isMedications()){
              /* name | dob | family doctor | medical problem  | allergies | medications  */
                     System.out.println("AllergicMedicatedAdult: Enter name, dob, family doctor, medical problem, allergies, and medications");
-                    er.setPatient(new AllergicMedicatedAdult(er.getInput().promptStringUser(),
+                    AllergicMedicatedAdult ama = new AllergicMedicatedAdult(er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringSentinel(),
                         er.getInput().promptStringSentinel()
-                        ));
-            AllergicMedicatedAdult converted = (AllergicMedicatedAdult)er.getPatient();
-            converted.setBasicBand(new AllergicMedicatedAdultBand(converted));
-            er.setPatient(converted);
+                        );
+            ama.setBasicBand(new AllergicMedicatedAdultBand(ama));
+            ama.getBasicBand().print();
+          
         }//End I:*
         
     
@@ -162,61 +141,58 @@ public class ER_Room {
         if(!form.isAbove18() && !form.isAllergies() & !form.isMedications()){
             /* name | dob | family doctor | medical problem | parent   */
             System.out.println("ChilPatient: Enter name, dob, family doctor, medical problem, and parent name");
-            er.setPatient(new ChildPatient(
+             ChildPatient cp = new ChildPatient(
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser(),
-                    er.getInput().promptStringUser()));
-            ChildPatient converted = (ChildPatient)er.getPatient();
-            converted.setBasicBand(new ChildBand(converted));
-            er.setPatient(converted);
+                    er.getInput().promptStringUser());
+            cp.setBasicBand(new ChildBand(cp));
+            cp.getBasicBand().print();
+                 
         }//End I:*
         
  
       if(!form.isAbove18() && form.isAllergies() & !form.isMedications()){
           System.out.println("AllergicChild: Enter name, dob, family doctor, medical problem, parent name, and allergies");
                 /* name | dob | family doctor | medical problem | parent  | allergies */
-                er.setPatient(new AllergicChild(
+                AllergicChild ac = new AllergicChild(
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
-                        er.getInput().promptStringSentinel()));
-            AllergicChild converted = (AllergicChild)er.getPatient();
-            converted.setBasicBand(new AllergicChildBand(converted));
-            er.setPatient(converted);
+                        er.getInput().promptStringSentinel());
+            ac.setBasicBand(new AllergicChildBand(ac));
+            ac.getBasicBand().print();
       }//End I:*
       
       if(!form.isAbove18() && !form.isAllergies() & form.isMedications()){
           System.out.println("MedicatedChild: Enter name, dob, family doctor, medical problem, parent name, and medications");
-                er.setPatient(new MedicatedChild(
+                MedicatedChild mc = new MedicatedChild(
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
-                        er.getInput().promptStringSentinel()));
-            MedicatedChild converted = (MedicatedChild)er.getPatient();
-            converted.setBasicBand(new MedicationChildBand(converted));
-            er.setPatient(converted);
+                        er.getInput().promptStringSentinel());
+            mc.setBasicBand(new MedicationChildBand(mc));
+            mc.getBasicBand().print();
       }//End I:*
       
       if(!form.isAbove18() && form.isAllergies() & form.isMedications()){
             System.out.println("AllergicMedicatedChild: Enter name, dob, family doctor, medical problem, parent name, allergies, and medications");
-                    er.setPatient(new AllergicMedicatedChild(er.getInput().promptStringUser(),
+                    AllergicMedicatedChild amc = new AllergicMedicatedChild(er.getInput().promptStringUser(),
                             er.getInput().promptStringUser(),
                             er.getInput().promptStringUser(),
                             er.getInput().promptStringUser(),
                             er.getInput().promptStringUser(),
                             er.getInput().promptStringSentinel(),
-                            er.getInput().promptStringSentinel()));
-            AllergicMedicatedChild converted = (AllergicMedicatedChild)er.getPatient();
-            converted.setBasicBand(new AllergicMedicatedChildBand(converted));
-            er.setPatient(converted);
+                            er.getInput().promptStringSentinel());
+            amc.setBasicBand(new AllergicMedicatedChildBand(amc));
+            amc.getBasicBand().print();
         }//End I:*
-      
+     
     }//End Main:*
 
 }//End Class:_____________________________
