@@ -6,6 +6,8 @@
 package ER_Dep;
 
 //Imports:_____________________________________
+import TheBands.AdultBand;
+import TheBands.AllergicAdultBand;
 import UserInput.UserInput;
 import TheBands.WristBand;
 import ThePatients.AdultPatient;
@@ -18,7 +20,6 @@ import ThePatients.MedicatedAdult;
 import ThePatients.MedicatedChild;
 import ThePatients.Patient;
 import java.time.LocalDate;
-import java.time.Period;
 
 /**
  *
@@ -78,6 +79,9 @@ public class ER_Room {
     //Program Starter 
     public static void main(String[] args) {
 
+        
+        //Step 1:Administer the intake form:_______________________________________
+        
         //A: Create 
         ER_Room er = new ER_Room();
         IntakeForm form = new IntakeForm();
@@ -85,26 +89,8 @@ public class ER_Room {
         //B: Gather 
         form.askForItAll();
 
-        //C: Check 
-        /*
-       Goes: above 18 | meds | allergies | research
-         */
- /*
-       int id,
-             String parent,
-             String name,
-             LocalDate dob,
-             String family_doctor,
-             String medicalProblem,
-             ArrayList<WristBand> bandList,
-             WristBand basicBand,
-             LocalDate admitDate
-         */
-        //Breaking for the night. Tomorrow parse dob and ask for rest of stuff
-        //At right level.
-        
-        
-        //Start Adult Patient Control Checks:______________________________
+  
+        //Step 2: Start Adult Patient Control Checks:______________________________
         
         
         if(form.isAbove18() && !form.isAllergies() & !form.isMedications()){
@@ -115,6 +101,10 @@ public class ER_Room {
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser(),
                     er.getInput().promptStringUser()));
+            //Assign wrist band
+            AdultPatient converted = (AdultPatient)er.getPatient();
+            converted.setBasicBand(new AdultBand(converted));
+            er.setPatient(converted);
         }//End I:*
         
         if(form.isAbove18() && form.isAllergies() & !form.isMedications()){
@@ -126,6 +116,10 @@ public class ER_Room {
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringUser(),
                         er.getInput().promptStringSentinel()));
+                //Assign Band
+            AllergicAdult converted = (AllergicAdult)er.getPatient();
+            converted.setBasicBand(new AllergicAdultBand(converted));
+            er.setPatient(converted);
         }//End I:*
         
         if(form.isAbove18() && !form.isAllergies() & form.isMedications()){
